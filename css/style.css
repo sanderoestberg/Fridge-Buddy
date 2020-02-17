@@ -1,25 +1,75 @@
-/*CSS document*/
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+}
 
-/*Insert global rules here - rules that apply for all pages on your site and all device sizes. This could be text color, font type, font-sizes, margin on elements */
+body {
+  margin: 0;
+}
 
-/*COMMENTS WITH CAPITAL LETTERS ARE EASY TO SPOT, SO USE THEM FOR HEADINGS FOR OVERVIEW. IT IS A GOOD IDEA TO HAVE A HEADING FOR YOUR HEADER, NAVIGATION, MAIN AND FOOTER. SEE EXAMPLE BELOW*/
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
 
-
-/*HEADER*/
-
-/* example where you target the h1 inside the header tag and give it a color and a size */
-header h1{
-color: #ffffff;  
-font-size: 48px;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 
-/*Main*/
-
-/* example to be deleted*/
-p{
-font-family: Tahoma, Geneva, sans-serif;  
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--green);
+  color: var(--text-color-light);
+  padding: 13.5px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
+.topbar h2 {
+  margin: 0;
+  font-weight: 300;
+}
 
-/*when you develop mobile first responsive pages, you add rules for different device sizes after all the global rules, starting with the smallest screen size*/
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: lightgreen;
+  color: orange;
+}
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+  background-color: lightgreen;
+  color: orange;
+}
