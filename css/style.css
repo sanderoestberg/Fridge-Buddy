@@ -1,5 +1,12 @@
+@charset "UTF-8";
 /*---------------Vores variabler---------------*/
 /*---------------Vores Inheritances-------------*/
+/* line 16, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+.topbar {
+  -webkit-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16); }
+
 /*---------------Vores Inheritances-------------*/
 /* line 26, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 * {
@@ -20,13 +27,8 @@ h1 {
   font-weight: 300;
   letter-spacing: 3px; }
 
-/* line 48, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
-a {
-  text-decoration: none;
-  color: white; }
-
-/* ---------- topbar styling ---------- */
-/* line 55, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* styling af topbar */
+/* line 49, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #818181;
   color: #F6F6F6;
@@ -36,15 +38,16 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; }
+  z-index: 9999;
+  justify-content: space-around; }
 
-/* line 67, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 63, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar h2 {
   margin: 0;
   font-weight: 300; }
 
-/* ---------- tabbar styling ---------- */
-/* line 73, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* styling af tabbar */
+/* line 69, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #818181;
   position: fixed;
@@ -52,27 +55,29 @@ a {
   left: 0;
   right: 0;
   z-index: 9999; }
+  /* line 76, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  .tabbar img {
+    height: 40px;
+    width: auto; }
 
-/* Style the links inside the navigation bar */
+/* Style på og omkring links i baren */
 /* line 83, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 20px 16px; }
+  padding: 10px 26px; }
 
-/* Change the color of links on hover */
-/* line 92, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* style ved hover */
+/* line 90, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
-/* Add a color to the active/current link */
-/* line 97, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* style når en side er aktiv*/
+/* line 95, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
-/* FRIDGE */
-/* line 103, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* FRIDGE SECTION */
+/* line 101, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
   height: 64px;
@@ -85,7 +90,7 @@ a {
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
   font-size: 40px;
   font-weight: 500; }
-  /* line 116, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 114, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #add-button p {
     display: flex;
     height: 64px;
@@ -93,12 +98,12 @@ a {
     align-items: center;
     color: #3b3b3b; }
 
-/* line 128, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 126, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
   transition-duration: 200ms;
   transform: rotate(45deg); }
 
-/* line 133, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 131, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #add-button-menu {
   display: none; }
 

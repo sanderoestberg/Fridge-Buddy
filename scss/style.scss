@@ -45,13 +45,7 @@ h1 {
   letter-spacing: 3px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-
-/* ---------- topbar styling ---------- */
+/* styling af topbar */
 .topbar {
   background-color: $darkgrey;
   color: $topbar;
@@ -62,6 +56,8 @@ a {
   left: 0;
   right: 0;
   z-index: 9999;
+  @extend %shadow;
+  justify-content: space-around;
 }
 
 .topbar h2 {
@@ -69,7 +65,7 @@ a {
   font-weight: 300;
 }
 
-/* ---------- tabbar styling ---------- */
+/* styling af tabbar */
 .tabbar {
   background-color: $darkgrey;
   position: fixed;
@@ -77,29 +73,31 @@ a {
   left: 0;
   right: 0;
   z-index: 9999;
+  img{
+    height: 40px;
+    width: auto;
+  }
 }
 
-/* Style the links inside the navigation bar */
+/* Style på og omkring links i baren */
 .tabbar a {
   display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 20px 16px;
+  padding: 10px 26px;
 
 }
 
-/* Change the color of links on hover */
+/* style ved hover */
 .tabbar a:hover {
   background-color: $lightgrey;
 }
 
-/* Add a color to the active/current link */
+/* style når en side er aktiv*/
 .tabbar a.active {
   background-color: $lightgrey;
 }
 
 
-/* FRIDGE */
+/* FRIDGE SECTION */
 #add-button{
     width: 64px;
     height: 64px;
