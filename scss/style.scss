@@ -24,8 +24,9 @@ $darkgrey: #818181;
 
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  
 }
 
 
@@ -125,6 +126,10 @@ a {
 }
 
 .rotate-trans{
-    transition: 200;
+    transition-duration: 200ms;
     transform: rotate(45deg)
+}
+
+#add-button-menu{
+display: none;
 }

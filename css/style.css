@@ -95,7 +95,11 @@ a {
 
 /* line 128, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
-  transition: 200;
+  transition-duration: 200ms;
   transform: rotate(45deg); }
+
+/* line 133, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+#add-button-menu {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
