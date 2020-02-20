@@ -1,11 +1,8 @@
-
-/*---------------Vores variabler---------------*/
-$red: #CE3233;
-
 /*---------------Vores variabler---------------*/
 $red: #DDA7A7;
 $green: #C9DDCA;
 $yellow: #E0DAAB;
+$topbar: #F6F6F6;
 $lightgrey: #E6E6E6;
 $darkgrey: #818181;
 
@@ -55,9 +52,9 @@ a {
 
 /* ---------- topbar styling ---------- */
 .topbar {
-  background-color: var(--green);
-  color: var(--text-color-light);
-  padding: 13.5px;
+  background-color: $darkgrey;
+  color: $topbar;
+  padding: 20px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -73,7 +70,7 @@ a {
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: green;
+  background-color: $darkgrey;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -87,20 +84,15 @@ a {
   color: black;
   text-align: center;
   padding: 20px 16px;
-  text-decoration: none;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+
 }
 
 /* Change the color of links on hover */
 .tabbar a:hover {
-  background-color: lightgreen;
-  color: orange;
+  background-color: $lightgrey;
 }
 
 /* Add a color to the active/current link */
 .tabbar a.active {
-  background-color: lightgreen;
-  color: orange;
+  background-color: $lightgrey;
 }

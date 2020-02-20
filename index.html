@@ -6,17 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>Untitled document</title>
-    <meta name="description" content="Fridge Buddy is a Web App which will help you managing your shoppinglist as well as your shopping list">
+    <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
     <meta name="author" content="Johanne, Sander og Oskar">
   <!--  <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onhashchange="pageChange()">
+  <div class="topbar">
+    <h2>FRIDGE BUDDY 2 MOTHERFUCKING THAUSAND</h2>
+  </div>
   <!-- navigation til vores SPA -->
     <nav class="tabbar">
-    <a href="#movies">Indkøbsseddel</a>
-    <a href="#genre">Mit Køleskab</a>
+    <a href="#shoplist">Indkøbsseddel</a>
+    <a href="#fridge">Mit Køleskab</a>
   </nav>
 
 <script src="js\main.js"></script>
