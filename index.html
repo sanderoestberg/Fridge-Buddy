@@ -12,14 +12,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onhashchange="">
   <!-- navigation til vores SPA -->
     <nav class="tabbar">
     <a href="#movies">Indkøbsseddel</a>
     <a href="#genre">Mit Køleskab</a>
   </nav>
+  <section id="fridge" class="page">
+<div id="add-button"><p class="rotate">+</p></div>
+<article class="add-button-menu">
 
-<script src="js\main.js"></script>
+</article>
+  </section>
+<script src="js\main.js" type="module"></script>
 </body>
 
 </html>

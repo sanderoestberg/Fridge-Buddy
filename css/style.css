@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  font-weight: 200; }
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 3px; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--green);
+  color: var(--text-color-light);
+  padding: 13.5px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; }
+
+.topbar h2 {
+  margin: 0;
+  font-weight: 300; }
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; }
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: lightgreen;
+  color: orange; }
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+  background-color: lightgreen;
+  color: orange; }
+
+/* FRIDGE */
+#add-button {
+  width: 64px;
+  height: 64px;
+  background-color: #fafafa;
+  border: 2px solid #818181;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  font-size: 40px;
+  font-weight: 500; }
+  #add-button p {
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    color: #3b3b3b; }
+
+.rotate-trans {
+  transition: 200;
+  transform: rotate(45deg); }

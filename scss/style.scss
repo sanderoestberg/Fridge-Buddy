@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html {
   font-family: Helvetica, Arial, sans-serif;
   height: 100%;
@@ -6,9 +11,7 @@ html {
   font-weight: 200;
 }
 
-body {
-  margin: 0;
-}
+
 
 h1 {
   font-size: 2em;
@@ -72,4 +75,36 @@ a {
 .tabbar a.active {
   background-color: lightgreen;
   color: orange;
+}
+
+
+/* FRIDGE */
+#add-button{
+    width: 64px;
+    height: 64px;
+    background-color: #fafafa;
+    border: 2px solid #818181;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.20);
+    font-size: 40px;
+    font-weight: 500;
+        
+    p{
+        display: flex;
+        height: 64px;
+        justify-content: center;
+        align-items: center;
+        color: #3b3b3b;
+        
+
+    }
+    
+}
+
+.rotate-trans{
+    transition: 200;
+    transform: rotate(45deg)
 }
