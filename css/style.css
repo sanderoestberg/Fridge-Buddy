@@ -1,10 +1,12 @@
 /*---------------Vores variabler---------------*/
 /*---------------Vores Inheritances-------------*/
 /*---------------Vores Inheritances-------------*/
+/* line 26, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 * {
   margin: 0;
   padding: 0; }
 
+/* line 32, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 html {
   font-family: Helvetica, Arial, sans-serif;
   height: 100%;
@@ -12,16 +14,19 @@ html {
   width: 100%;
   font-weight: 200; }
 
+/* line 41, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px; }
 
+/* line 47, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 a {
   text-decoration: none;
   color: white; }
 
 /* ---------- topbar styling ---------- */
+/* line 54, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #818181;
   color: #F6F6F6;
@@ -33,11 +38,13 @@ a {
   right: 0;
   z-index: 9999; }
 
+/* line 66, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .topbar h2 {
   margin: 0;
   font-weight: 300; }
 
 /* ---------- tabbar styling ---------- */
+/* line 72, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #818181;
   position: fixed;
@@ -47,6 +54,7 @@ a {
   z-index: 9999; }
 
 /* Style the links inside the navigation bar */
+/* line 82, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
   color: black;
@@ -54,9 +62,13 @@ a {
   padding: 20px 16px; }
 
 /* Change the color of links on hover */
+/* line 91, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
 /* Add a color to the active/current link */
+/* line 96, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
+
+/*# sourceMappingURL=style.css.map */
