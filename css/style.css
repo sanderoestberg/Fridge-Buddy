@@ -1,5 +1,12 @@
+@charset "UTF-8";
 /*---------------Vores variabler---------------*/
 /*---------------Vores Inheritances-------------*/
+/* line 16, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.topbar {
+  -webkit-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16); }
+
 /*---------------Vores Inheritances-------------*/
 /* line 26, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 * {
@@ -20,13 +27,8 @@ h1 {
   font-weight: 300;
   letter-spacing: 3px; }
 
-/* line 47, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
-a {
-  text-decoration: none;
-  color: white; }
-
-/* ---------- topbar styling ---------- */
-/* line 54, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* styling af topbar */
+/* line 50, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #818181;
   color: #F6F6F6;
@@ -36,15 +38,16 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; }
+  z-index: 9999;
+  justify-content: space-around; }
 
-/* line 66, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 64, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .topbar h2 {
   margin: 0;
   font-weight: 300; }
 
-/* ---------- tabbar styling ---------- */
-/* line 72, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* styling af tabbar */
+/* line 70, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #818181;
   position: fixed;
@@ -52,26 +55,28 @@ a {
   left: 0;
   right: 0;
   z-index: 9999; }
+  /* line 77, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+  .tabbar img {
+    height: 40px;
+    width: auto; }
 
-/* Style the links inside the navigation bar */
-/* line 82, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* Style på og omkring links i baren */
+/* line 84, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 20px 16px; }
+  padding: 10px 26px; }
 
-/* Change the color of links on hover */
+/* style ved hover */
 /* line 91, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
-/* Add a color to the active/current link */
+/* style når en side er aktiv*/
 /* line 96, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
-/* FRIDGE */
+/* FRIDGE SECTION */
 /* line 102, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
