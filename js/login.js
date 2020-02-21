@@ -2,7 +2,7 @@
 
 import SpaService from "./spa-service.js";
 
-let _spaService = new SpaService();
+let _spaService = new SpaService("login");
 
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
