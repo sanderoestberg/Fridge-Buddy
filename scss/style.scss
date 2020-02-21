@@ -96,6 +96,27 @@ h1 {
   background-color: $lightgrey;
 }
 
+.page {
+    display: none;
+    /*min heigh is screen heigh minus height of tab and top bar */
+    min-height: calc(100vh - 128px);
+    animation: fadeIn 0.4s;
+    /* padding equals height of tabbar and topbar */
+    padding: 64px 0;
+  }
+  
+  /* ---------- animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+
 
 /* FRIDGE SECTION */
 #add-button{
