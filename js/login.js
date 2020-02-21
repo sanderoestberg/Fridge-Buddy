@@ -1,8 +1,13 @@
 "use strict";
 
+import SpaService from "./spa-service.js";
+
+let _spaService = new SpaService();
+
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
 let _currentUser;
+
 
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change
@@ -17,14 +22,14 @@ firebase.auth().onAuthStateChanged(function (user) {
 function userAuthenticated(user) {
   _currentUser = user;
   hideTabbar(false);
-  init();
-  showLoader(false);
+  //init();
+  //showLoader(false);
 }
 
 function userNotAuthenticated() {
   _currentUser = null; // reset _currentUser
   hideTabbar(true);
-  showPage("login");
+  _spaService.showPage("login");
 
   // Firebase UI configuration
   const uiConfig = {
@@ -37,7 +42,7 @@ function userNotAuthenticated() {
   // Init Firebase UI Authentication
   const ui = new firebaseui.auth.AuthUI(firebase.auth());
   ui.start('#firebaseui-auth-container', uiConfig);
-  showLoader(false);
+  //showLoader(false);
 }
 
 // show and hide tabbar
@@ -48,6 +53,10 @@ function hideTabbar(hide) {
   } else {
     tabbar.classList.remove("hide");
   }
+}
+
+window.logout = function () {
+    logout();
 }
 
 // sign out user

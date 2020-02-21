@@ -124,4 +124,44 @@ h1 {
 #add-button-menu {
   display: none; }
 
+/* ---------- HIDE ---------- */
+/* line 157, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear; }
+
+/* ---------- authentication styling ---------- */
+/* line 164, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* line 172, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family); }
+
+/* line 177, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/* line 184, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+  background: var(--green);
+  color: #fff;
+  border-radius: 0; }
+
+/* line 192, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green); }
+
 /*# sourceMappingURL=style.css.map */

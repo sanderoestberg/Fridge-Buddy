@@ -152,3 +152,43 @@ h1 {
 #add-button-menu{
 display: none;
 }
+
+/* ---------- HIDE ---------- */
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* ---------- authentication styling ---------- */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family);
+}
+
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+  background: var(--green);
+  color: #fff;
+  border-radius: 0;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green);
+}

@@ -19,10 +19,11 @@
   </div>
 
   <!-- navigation til vores SPA -->
-    <nav class="tabbar">
+    <nav id="tabbar" class="tabbar hide">
       <a href="#recipe"> <img src="images\hat-icon.svg"> </a>
       <a href="#fridge"> <img src="images\fridge-icon.svg"> </a>
       <a href="#shoplist"> <img src="images\shoplist-icon.svg"> </a>
+      <a href="#profile"> <img src="images\profile2-icon.svg"> </a>
 
   </nav>
 
@@ -43,8 +44,9 @@
 <section id="profile" class="page">
   <header class="topbar">
     <h2>Profile</h2>
-    <a class="right" href="#" onclick="logout()">Logout</a>
+    <a class="right" href="#login" onclick="logout()">Logout</a>
   </header>
+</section>
 <!-- login page -->
 <section id="login" class="page">
   <header class="topbar">
@@ -67,7 +69,7 @@
 <!-- SCRIPT TIL ADD BUTTON, SKAL JEG NOK FJERNE - Sander-->
 <script src="js\add-button.js"></script>
 <!-- SCRIPT TIL LOGIN-->
-<script src="js/login.js"></script>
+<script src="js/login.js" type="module"></script>
 
 </body>
 
