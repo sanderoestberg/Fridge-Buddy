@@ -32,10 +32,11 @@ function appendRecipes(recipes) {
       <article class="${recipe.slug}" onclick="myFunction('${recipe.slug}')">
         <img src="${recipe.acf.img}">
         <h2>${recipe.title.rendered}</h2>
+        <h3>${recipe.acf.time} minutter </h3>
         <p>${recipe.acf.description}</p>
         <div class="moreInfo">
-          <h4> Description </h4>
-
+          <h4> Step-By-Step </h4>
+          <p>${recipe.acf.stepbystep}
         </div>
       </article>
     `;

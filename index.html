@@ -3,14 +3,14 @@
 <!--Language set to English. Change to da for Danish if needed-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>Untitled document</title>
-    <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
-    <meta name="author" content="Johanne, Sander og Oskar">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <title>Untitled document</title>
+  <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
+  <meta name="author" content="Johanne, Sander og Oskar">
   <!--  <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
-    <link rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 
 <body onhashchange="pageChange()">
@@ -19,59 +19,62 @@
   </div>
 
   <!-- navigation til vores SPA -->
-    <nav id="tabbar" class="tabbar hide">
-      <a href="#recipe"> <img src="images\hat-icon.svg"> </a>
-      <a href="#fridge"> <img src="images\fridge-icon.svg"> </a>
-      <a href="#shoplist"> <img src="images\shoplist-icon.svg"> </a>
-      <a href="#profile"> <img src="images\profile2-icon.svg"> </a>
+  <nav id="tabbar" class="tabbar hide">
+    <a href="#recipe"> <img src="images\hat-icon.svg"> </a>
+    <a href="#fridge"> <img src="images\fridge-icon.svg"> </a>
+    <a href="#shoplist"> <img src="images\shoplist-icon.svg"> </a>
+    <a href="#profile"> <img src="images\profile2-icon.svg"> </a>
 
   </nav>
 
   <section id="fridge" class="page">
-<div id="add-button" onclick="addButton()"><p>+</p></div>
-<article class="add-button-menu">
-</article>
+    <div id="add-button" onclick="addButton()">
+      <p>+</p>
+    </div>
+    <article class="add-button-menu">
+    </article>
   </section>
 
-<section id="shoplist" class="page">
+  <section id="shoplist" class="page">
 
-</section>
+  </section>
 
-<section id="recipe" class="page">
+  <section id="recipe" class="page">
     <input type="search" placeholder="Search" onkeyup="search(this.value)">
     <section id="recipe-container" class="grid-container"></section>
-</section>
-<!-- profile page -->
-<section id="profile" class="page">
-  <header class="topbar">
-    <h2>Profile</h2>
-    <a class="right" href="#login" onclick="logout()">Logout</a>
-  </header>
-</section>
-<!-- login page -->
-<section id="login" class="page">
-  <header class="topbar">
-    <h2>Login</h2>
-  </header>
-  <!-- firebase auth container  -->
-  <section id="firebaseui-auth-container"></section>
-</section>
+  </section>
+  <!-- profile page -->
+  <section id="profile" class="page">
+    <header class="topbar">
+      <h2>Profile</h2>
+      <a class="right" href="#login" onclick="logout()">Logout</a>
+    </header>
+  </section>
+  <!-- login page -->
+  <section id="login" class="page">
+    <header class="topbar">
+      <h2>Login</h2>
+    </header>
+    <!-- firebase auth container  -->
+    <section id="firebaseui-auth-container"></section>
+  </section>
 
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
-<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
- <!-- firebase config js file -->
- <script src="js/firebase_config.js"></script>
-<!-- SCRIPT til mainJS -->
-<script src="js\main.js" type="module"></script>
-<!-- SCRIPT TIL ADD BUTTON, SKAL JEG NOK FJERNE - Sander-->
-<script src="js\add-button.js"></script>
-<!-- SCRIPT TIL LOGIN-->
-<script src="js/login.js" type="module"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <!-- firebase config js file -->
+  <script src="js/firebase_config.js"></script>
+  <!-- SCRIPT til mainJS -->
+  <script src="js\main.js" type="module"></script>
+  <!-- SCRIPT TIL ADD BUTTON, SKAL JEG NOK FJERNE - Sander-->
+  <script src="js\add-button.js"></script>
+  <!-- SCRIPT TIL LOGIN-->
+  <script src="js/login.js" type="module"></script>
 
+  <script src="js\opskrift.js"></script>
 </body>
 
 </html>
