@@ -26,7 +26,7 @@ $darkgrey: #818181;
 * {
   padding: 0;
   margin: 0;
-  
+
 }
 
 
@@ -104,14 +104,14 @@ h1 {
     /* padding equals height of tabbar and topbar */
     padding: 64px 0;
   }
-  
+
   /* ---------- animations ---------- */
 /* fade in */
 @keyframes fadeIn {
     from {
       opacity: 0
     }
-  
+
     to {
       opacity: 1
     }
