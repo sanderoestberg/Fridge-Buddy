@@ -10,10 +10,10 @@
 /*---------------Vores Inheritances-------------*/
 /* line 26, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 * {
-  margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
-/* line 32, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 33, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 html {
   font-family: Helvetica, Arial, sans-serif;
   height: 100%;
@@ -21,14 +21,14 @@ html {
   width: 100%;
   font-weight: 200; }
 
-/* line 41, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 42, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px; }
 
 /* styling af topbar */
-/* line 48, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 49, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #818181;
   color: #F6F6F6;
@@ -41,13 +41,13 @@ h1 {
   z-index: 9999;
   justify-content: space-around; }
 
-/* line 62, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 63, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .topbar h2 {
   margin: 0;
   font-weight: 300; }
 
 /* styling af tabbar */
-/* line 68, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 69, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #818181;
   position: fixed;
@@ -55,29 +55,29 @@ h1 {
   left: 0;
   right: 0;
   z-index: 9999; }
-  /* line 75, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 76, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   .tabbar img {
     height: 40px;
     width: auto; }
 
 /* Style på og omkring links i baren */
-/* line 82, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 83, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
   padding: 10px 26px; }
 
 /* style ved hover */
-/* line 89, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 90, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
 /* style når en side er aktiv*/
-/* line 94, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 95, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
 /* FRIDGE SECTION */
-/* line 100, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 101, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
   height: 64px;
@@ -90,7 +90,7 @@ h1 {
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
   font-size: 40px;
   font-weight: 500; }
-  /* line 113, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 114, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   #add-button p {
     display: flex;
     height: 64px;
@@ -98,9 +98,13 @@ h1 {
     align-items: center;
     color: #3b3b3b; }
 
-/* line 125, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 126, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
-  transition: 200;
+  transition-duration: 200ms;
   transform: rotate(45deg); }
+
+/* line 131, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+#add-button-menu {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
