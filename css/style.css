@@ -124,51 +124,44 @@ h1 {
 #add-button-menu {
   display: none; }
 
-/* line 158, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
-#loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999999;
-  overflow: hidden;
-  background: var(--loader-background-color);
-  text-align: center; }
-
-/* line 170, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
-.spinner {
-  border: 5px solid var(--light-grey);
-  border-radius: 50%;
-  border-top: 5px solid var(--light-green);
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 1s linear infinite;
-  /* Safari */
-  animation: spin 1s linear infinite;
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-/* line 189, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* ---------- HIDE ---------- */
+/* line 157, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .hide {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 0.4s, opacity 0.4s linear; }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
+/* ---------- authentication styling ---------- */
+/* line 164, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
-/* line 204, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
-.moreInfo {
-  display: none; }
+/* line 172, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family); }
+
+/* line 177, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/* line 184, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+  background: var(--green);
+  color: #fff;
+  border-radius: 0; }
+
+/* line 192, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green); }
 
 /*# sourceMappingURL=style.css.map */
