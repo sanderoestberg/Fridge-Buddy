@@ -2,7 +2,7 @@
 
 import SpaService from "./spa-service.js";
 
-let _spaService = new SpaService();
+let _spaService = new SpaService("login");
 
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
@@ -63,9 +63,10 @@ window.logout = function () {
 function logout() {
   firebase.auth().signOut();
   // reset input fields
+  /*
   document.querySelector('#name').value = "";
   document.querySelector('#mail').value = "";
   document.querySelector('#birthdate').value = "";
   document.querySelector('#hairColor').value = "";
-  document.querySelector('#imagePreview').src = "";
+  document.querySelector('#imagePreview').src = "";*/
 }
