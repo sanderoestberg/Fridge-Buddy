@@ -1,6 +1,15 @@
 "use strict";
 
 
+function showLoader(show) {
+  let loader = document.querySelector('#loader');
+  if (show) {
+    loader.classList.remove("hide");
+  } else {
+    loader.classList.add("hide");
+  }
+}
+
 // =========== Recipe SPA functionality =========== //
 
 let recipes = [];
@@ -35,8 +44,10 @@ function appendRecipes(recipes) {
         <h3>${recipe.acf.time} minutter </h3>
         <p>${recipe.acf.description}</p>
         <div class="moreInfo">
+        <h4> Ingridienser </h4>
+        <p>${recipe.acf.ingredients}</p>
           <h4> Step-By-Step </h4>
-          <p>${recipe.acf.stepbystep}
+          <p>${recipe.acf.stepbystep}</p>
         </div>
       </article>
     `;
