@@ -18,6 +18,7 @@ $darkgrey: #818181;
   -moz-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
+
 /*---------------Vores Inheritances-------------*/
 
 //////////////////////////////////////////////////////////////////////
@@ -26,7 +27,7 @@ $darkgrey: #818181;
 * {
   padding: 0;
   margin: 0;
-  
+
 }
 
 
@@ -73,7 +74,8 @@ h1 {
   left: 0;
   right: 0;
   z-index: 9999;
-  img{
+
+  img {
     height: 40px;
     width: auto;
   }
@@ -97,60 +99,61 @@ h1 {
 }
 
 .page {
-    display: none;
-    /*min heigh is screen heigh minus height of tab and top bar */
-    min-height: calc(100vh - 128px);
-    animation: fadeIn 0.4s;
-    /* padding equals height of tabbar and topbar */
-    padding: 64px 0;
-  }
-  
-  /* ---------- animations ---------- */
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 128px);
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 64px 0;
+  margin: 0 3%;
+}
+
+/* ---------- animations ---------- */
 /* fade in */
 @keyframes fadeIn {
-    from {
-      opacity: 0
-    }
-  
-    to {
-      opacity: 1
-    }
+  from {
+    opacity: 0
   }
+
+  to {
+    opacity: 1
+  }
+}
 
 
 /* FRIDGE SECTION */
-#add-button{
-    width: 64px;
+#add-button {
+  width: 64px;
+  height: 64px;
+  background-color: #fafafa;
+  border: 2px solid #818181;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.20);
+  font-size: 40px;
+  font-weight: 500;
+
+  p {
+    display: flex;
     height: 64px;
-    background-color: #fafafa;
-    border: 2px solid #818181;
-    border-radius: 100px;
-    position: absolute;
-    bottom: 70px;
-    right: 20px;
-    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.20);
-    font-size: 40px;
-    font-weight: 500;
-
-    p{
-        display: flex;
-        height: 64px;
-        justify-content: center;
-        align-items: center;
-        color: #3b3b3b;
+    justify-content: center;
+    align-items: center;
+    color: #3b3b3b;
 
 
-    }
+  }
 
 }
 
-.rotate-trans{
-    transition-duration: 200ms;
-    transform: rotate(45deg)
+.rotate-trans {
+  transition-duration: 200ms;
+  transform: rotate(45deg)
 }
 
-#add-button-menu{
-display: none;
+#add-button-menu {
+  display: none;
 }
 
 /* ---------- HIDE ---------- */
@@ -191,4 +194,73 @@ display: none;
 
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {
   background-color: var(--green);
+}
+
+/* ---------- Indhold køleskab---------- */
+
+.mad {
+  display: flex;
+  width: 90%;
+  height: 8vh;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 18px;
+  margin-top: 5%;
+  justify-content: space-between;
+  padding: 0 3%;
+  align-items: center;
+
+}
+
+.madvarer {
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.madvarer img {
+  width: 7%;
+}
+
+.cirkler {
+  border: 2px solid #818181;
+  border-radius: 100px;
+  margin-top: 10%;
+  width: 30px;
+  height: 30px;
+}
+
+#flex-cirkler {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15%;
+  margin-top: 5%;
+}
+
+.udløbet {
+  background-color: $red;
+}
+
+.udløber {
+  background-color: $yellow;
+
+}
+
+.frisk {
+  background-color: $green;
+
+}
+
+#flex-cirkler article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#flex-cirkler p {
+text-transform: uppercase;
+}
+
+.page_overskrift {
+text-transform: uppercase; margin-top: 10%;
 }
