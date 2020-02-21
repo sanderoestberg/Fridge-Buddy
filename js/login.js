@@ -2,6 +2,7 @@
 
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
+let _currentUser;
 
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change

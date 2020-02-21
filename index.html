@@ -10,6 +10,7 @@
     <meta name="author" content="Johanne, Sander og Oskar">
   <!--  <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
     <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 
 <body onhashchange="pageChange()">
@@ -53,10 +54,11 @@
   <section id="firebaseui-auth-container"></section>
 </section>
 
-<!-- Firebase App SDKs -->
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
  <!-- firebase config js file -->
  <script src="js/firebase_config.js"></script>
