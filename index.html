@@ -53,16 +53,28 @@
 </h3>
 
     <article class="madvarer">
-      <div class="mad" id="milk">
+      <div class="mad">
       <h4>Mælk</h4>
-      <img src="images/ikoner_indhold/milk.svg" alt="milk">
+      <img src="images/ikoner_indhold/milk.svg">
     </div>
+    </article>
+    <article id="madvarer-container">
+
     </article>
 <!--- Tilføje knap til madvarer-->
     <div id="add-button" onclick="addButton()">
       <p>+</p>
     </div>
-    <article class="add-button-menu">
+    <article class="add-button-menu" style="display:none;">
+      <article>
+        <h2>TILFØJ NYE MADVARE TIL DIT KØLESKAB</h2>
+        <input type="search" placeholder="Search" onkeyup="search(this.value)">
+      </article>
+      <br>
+      <h3>FORSLAG</h3>
+      <article id="add-menu-forslag">
+
+      </article>
     </article>
   </section>
 <!--Indkøbsliste Side-->
