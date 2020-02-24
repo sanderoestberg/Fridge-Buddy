@@ -7,7 +7,7 @@ let _spaService = new SpaService("login");
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
 let _currentUser;
-const _madRef = _db.collection("movies");
+const _madRef = _db.collection("madvarer");
 let _madvarer;
 
 // ========== FIREBASE AUTH ========== //
@@ -21,9 +21,10 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function userAuthenticated(user) {
+  appendUserData(user);
   _currentUser = user;
   hideTabbar(false);
-  //init();
+  init();
   //showLoader(false);
 }
 
@@ -70,4 +71,72 @@ function logout() {
   document.querySelector('#birthdate').value = "";
   document.querySelector('#hairColor').value = "";
   document.querySelector('#imagePreview').src = "";*/
+}
+
+function appendUserData(user) {
+  document.querySelector('#profile').innerHTML += `
+  <h2 class="page_overskrift"> Profil oplysninger </h2>
+  <section class="profil-oplysninger">
+  <article id="profil_center">
+  <img src="images/profile-icon.svg">
+  </article>
+  <article>
+    <h5>navn</h5>
+    <h3>${user.displayName}</h3>
+    <div class="line"></div>
+    </article>
+    <article>
+    <h5>email</h5>
+    <p>${user.email}</p>
+    <div class="line"></div>
+    </article>
+  </section>`;
+}
+
+// initialize movie references - all movies and user's favourite movies
+function init() {
+  // init user data and favourite movies
+  _userRef.doc(_currentUser.uid).onSnapshot({
+    includeMetadataChanges: true
+  }, function (userData) {
+    if (!userData.metadata.hasPendingWrites && userData.data()) {
+      _currentUser = {
+        ...firebase.auth().currentUser,
+        ...userData.data()
+      }; //concating two objects: authUser object and userData objec from the db
+      appendUserData();
+      appendFavMovies(_currentUser.favMad);
+      if (_madvarer) {
+        appendMadvarer(_madvarer); // refresh movies when user data changes
+      }
+      //showLoader(false);
+    }
+  });
+
+  // init all movies
+  _madRef.onSnapshot(function (snapshotData) {
+    _madvarer = [];
+    snapshotData.forEach(function (doc) {
+      let mad = doc.data();
+      mad.id = doc.id;
+      _madvarer.push(mad);
+    });
+    appendMadvarer(_madvarer);
+  });
+}
+
+function appendMadvarer(madvarer) {
+  let htmlTemplate = "";
+  for (let mad of madvarer) {
+    htmlTemplate += `
+      <article class="madvarer">
+      <div class="mad highlight">
+      <h4>${mad.title}</h4>
+      <p>${mad.holdbarhed}</p>
+      <img src="${mad.img}">
+    </div>
+    </article>
+    `;
+  }
+  document.querySelector('#add-menu-forslag').innerHTML = htmlTemplate;
 }

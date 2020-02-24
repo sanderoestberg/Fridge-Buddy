@@ -70,6 +70,17 @@ h1 {
   font-weight: 300;
 }
 
+.topbar a {
+  text-decoration: none;
+  position: absolute;
+  top: 27px;
+  color: $lightgrey ;
+}
+
+
+.topbar a.right {
+    right: 20px;}
+
 /* styling af tabbar */
 .tabbar {
   background-color: $darkgrey;
@@ -139,6 +150,7 @@ padding: 65px 0;
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.20);
   font-size: 40px;
   font-weight: 500;
+  z-index: 100;
 
   p {
     display: flex;
@@ -157,8 +169,22 @@ padding: 65px 0;
   transform: rotate(45deg)
 }
 
-#add-button-menu {
+.add-button-menu {
   display: none;
+  position: absolute;
+  top: 80px;
+  background-color: white;
+  border: 2px solid $darkgrey;
+  border-radius: 25px;
+  width: 80%;
+  height: 76vh;
+  margin: 3.5%;
+  padding: 3%;
+  
+}
+
+.highlight{
+    background-color: $lightgrey;
 }
 
 /* ---------- HIDE ---------- */
@@ -201,20 +227,88 @@ padding: 65px 0;
   background-color: var(--green);
 }
 
+/* ---------- profile ---------- */
+.profil-oplysninger {
+  display: flex;
+  margin-top: 10%;
+  width: 98%;
+  height: 60vh;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 25px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profil-oplysninger img {
+  width: 12%; align-content: center;
+}
+
+.line{
+  width: 66%;
+  border-bottom: 1px solid black;
+  }
+
+.profil-oplysninger h5 {
+  text-transform: uppercase; margin: 1% 0; font-size: 1.1em;
+}
+
+.profil-oplysninger h3 {
+  font-size: 1.2em;
+}
+
+.profil-oplysninger p {
+  font-size: 1.2em;
+}
+
+.profil-oplysninger article {
+  margin: 7% 0;
+  display:flex;
+ align-items: center;
+  flex-direction: column;
+}
+
+#profil_center {
+  margin: 0;
+}
+
 /* ---------- Indhold køleskab---------- */
+
+#indhold-skraldespand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 6% 0 3%;
+  margin-top: 5%;
+}
+
+#indhold-skraldespand img {
+  width: 8%; height: 5vh;
+}
+
+#indhold-skraldespand h3 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.3em;
+}
 
 .mad {
   display: flex;
   width: 90%;
-  height: 8vh;
+  height: 10vh;
   border-style: solid;
   border-color: grey;
-  border-radius: 18px;
-  margin-top: 5%;
+  border-radius: 25px;
+  margin-top: 2%;
   justify-content: space-between;
-  padding: 0 3%;
+  padding: 0 5%;
   align-items: center;
 
+}
+
+.mad h4 {
+  font-size: 1.3em;
 }
 
 .madvarer {
@@ -224,7 +318,8 @@ padding: 65px 0;
 }
 
 .madvarer img {
-  width: 7%;
+  width: 9%;
+  height: 9vh;
 }
 
 .cirkler {
@@ -264,6 +359,8 @@ padding: 65px 0;
 
 #flex-cirkler p {
   text-transform: uppercase;
+  margin-top: 15%;
+  ;
 }
 
 .page_overskrift {
@@ -317,6 +414,8 @@ input, select {
   border: 0;
   border-radius: 0;
 }
+
+
 
 /* loader */
 /* ---------- loader styling ---------- */
