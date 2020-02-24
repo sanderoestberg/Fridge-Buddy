@@ -38,16 +38,16 @@ function appendRecipes(recipes) {
 
   for (let recipe of recipes) {
     htmlTemplate += `
-      <article class="${recipe.slug}" onclick="myFunction('${recipe.slug}')">
+      <article class="${recipe.slug} children" onclick="myFunction('${recipe.slug}')">
         <img src="${recipe.acf.img}">
         <h2>${recipe.title.rendered}</h2>
-        <h3>${recipe.acf.time} minutter </h3>
-        <p>${recipe.acf.description}</p>
-        <div class="moreInfo">
-        <h4> Ingridienser </h4>
-        <p>${recipe.acf.ingredients}</p>
-          <h4> Step-By-Step </h4>
-          <p>${recipe.acf.stepbystep}</p>
+        <h3>~ ${recipe.acf.time} minutter ~</h3>
+        <p>${recipe.acf.description}</p> <br>
+        <div class="moreInfo" style="display: none;">
+        <h4> Ingridienser </h4> <br>
+        <ul>${recipe.acf.ingredients}</ul> <br>
+          <h4> Step-By-Step </h4> <br>
+          <ul>${recipe.acf.stepbystep}</ul> <br>
         </div>
       </article>
     `;
@@ -74,7 +74,7 @@ function myFunction(recipeslug) {
 // search functionality
 function search(value) {
   let searchQuery = value.toLowerCase();
-  let filteredMovies = [];
+  let filteredRecipes = [];
   for (let recipe of recipes) {
     let title = recipe.title.rendered.toLowerCase();
     if (title.includes(searchQuery)) {
@@ -83,7 +83,7 @@ function search(value) {
 
   }
   console.log(filteredRecipes);
-  appendMovies(filteredRecipes);
+  appendRecipes(filteredRecipes);
 
   if (searchQuery.length === 0) {
     appendRecipes(recipes)

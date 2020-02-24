@@ -30,6 +30,9 @@ $darkgrey: #818181;
 
 }
 
+body{
+  overflow-x: hidden;
+}
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -37,6 +40,7 @@ html {
   text-align: center;
   width: 100%;
   font-weight: 200;
+
 }
 
 
@@ -104,7 +108,7 @@ h1 {
   min-height: calc(100vh - 128px);
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
-  padding: 64px 0;
+padding: 65px 0;
   margin: 0 3%;
 }
 
@@ -269,12 +273,50 @@ h1 {
 
 /* RECIPEEEEEEEEEEEEEEEES */
 #recipe-container {
+  margin-top: 30px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+width: 100%;
+height: auto;
   img {
-    width: 30%;
+    width: 100%;
     height: auto;
+    border: 2px solid $darkgrey;
+    border-radius: 7px;
+  }
+  p {
+    height: 94px;
   }
 }
 
+.children {
+  width: 46%; max-width: 400px;
+  height: auto;
+  padding: 2% 2%;
+  text-align: left;
+}
+
+.recipesearch{
+  border: 1px solid $darkgrey;
+  border-radius: 7px;
+  color: $darkgrey;
+  width: 90%;
+  margin: 15px 5% 15px 5%;
+}
+
+input, select {
+  -webkit-appearance: none;
+  width: 90%;
+  max-width: 350px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  display: block;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+}
 
 /* loader */
 /* ---------- loader styling ---------- */
