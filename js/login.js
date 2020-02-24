@@ -7,7 +7,8 @@ let _spaService = new SpaService("login");
 // ========== GLOBAL VARIABLES ========== //
 const _userRef = _db.collection("users")
 let _currentUser;
-
+const _madRef = _db.collection("movies");
+let _madvarer;
 
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change

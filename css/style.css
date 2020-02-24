@@ -1,19 +1,19 @@
 @charset "UTF-8";
 /*---------------Vores variabler---------------*/
 /*---------------Vores Inheritances-------------*/
-/* line 16, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 16, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar {
   -webkit-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16); }
 
 /*---------------Vores Inheritances-------------*/
-/* line 27, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 27, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 * {
   padding: 0;
   margin: 0; }
 
-/* line 34, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 34, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 html {
   font-family: Helvetica, Arial, sans-serif;
   height: 100%;
@@ -21,14 +21,14 @@ html {
   width: 100%;
   font-weight: 200; }
 
-/* line 43, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 43, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px; }
 
 /* styling af topbar */
-/* line 50, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 50, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #818181;
   color: #F6F6F6;
@@ -41,13 +41,13 @@ h1 {
   z-index: 9999;
   justify-content: space-around; }
 
-/* line 64, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 64, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar h2 {
   margin: 0;
   font-weight: 300; }
 
 /* styling af tabbar */
-/* line 70, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 70, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #818181;
   position: fixed;
@@ -55,28 +55,28 @@ h1 {
   left: 0;
   right: 0;
   z-index: 9999; }
-  /* line 78, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+  /* line 78, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   .tabbar img {
     height: 40px;
     width: auto; }
 
 /* Style på og omkring links i baren */
-/* line 85, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 85, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
   padding: 10px 26px; }
 
 /* style ved hover */
-/* line 92, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 92, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
 /* style når en side er aktiv*/
-/* line 97, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 97, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
-/* line 101, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 101, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .page {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
@@ -95,7 +95,7 @@ h1 {
     opacity: 1; } }
 
 /* FRIDGE SECTION */
-/* line 126, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 126, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
   height: 64px;
@@ -108,7 +108,7 @@ h1 {
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
   font-size: 40px;
   font-weight: 500; }
-  /* line 139, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+  /* line 139, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #add-button p {
     display: flex;
     height: 64px;
@@ -116,24 +116,24 @@ h1 {
     align-items: center;
     color: #3b3b3b; }
 
-/* line 151, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 151, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
   transition-duration: 200ms;
   transform: rotate(45deg); }
 
-/* line 156, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 156, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #add-button-menu {
   display: none; }
 
 /* ---------- HIDE ---------- */
-/* line 161, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 161, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .hide {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 0.4s, opacity 0.4s linear; }
 
 /* ---------- authentication styling ---------- */
-/* line 168, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 168, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #firebaseui-auth-container {
   position: absolute;
   top: 50%;
@@ -141,19 +141,19 @@ h1 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* line 176, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 176, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-container {
   font-family: var(--font-family);
   font: 16px var(--font-family); }
 
-/* line 181, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 181, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-title {
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-/* line 188, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 188, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .mdl-button--raised.mdl-button--colored,
 .mdl-button--raised.mdl-button--colored:active,
 .mdl-button--raised.mdl-button--colored:hover {
@@ -161,12 +161,12 @@ h1 {
   color: #fff;
   border-radius: 0; }
 
-/* line 196, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 196, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {
   background-color: var(--green); }
 
 /* ---------- Indhold køleskab---------- */
-/* line 202, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 202, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .mad {
   display: flex;
   width: 90%;
@@ -179,17 +179,17 @@ h1 {
   padding: 0 3%;
   align-items: center; }
 
-/* line 216, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 216, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .madvarer {
   max-width: 100%;
   justify-content: center;
   display: flex; }
 
-/* line 222, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 222, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .madvarer img {
   width: 7%; }
 
-/* line 226, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 226, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .cirkler {
   border: 2px solid #818181;
   border-radius: 100px;
@@ -197,49 +197,49 @@ h1 {
   width: 30px;
   height: 30px; }
 
-/* line 234, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 234, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler {
   display: flex;
   justify-content: space-between;
   margin: 0 15%;
   margin-top: 5%; }
 
-/* line 241, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 241, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .udløbet {
   background-color: #DDA7A7; }
 
-/* line 245, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 245, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .udløber {
   background-color: #E0DAAB; }
 
-/* line 250, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 250, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .frisk {
   background-color: #C9DDCA; }
 
-/* line 255, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 255, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler article {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-/* line 261, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 261, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler p {
   text-transform: uppercase; }
 
-/* line 265, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 265, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .page_overskrift {
   text-transform: uppercase;
   margin-top: 10%; }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-/* line 272, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 272, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #recipe-container img {
   width: 30%;
   height: auto; }
 
 /* loader */
 /* ---------- loader styling ---------- */
-/* line 281, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 281, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #loader {
   position: fixed;
   left: 0px;
@@ -251,7 +251,7 @@ h1 {
   background-color: none;
   text-align: center; }
 
-/* line 293, ../../../../../../../../../../../../../Users/johannejustesenpoulsen/Desktop/Multimediedesign/3.semester/Webapp/Fridge-Buddy/scss/style.scss */
+/* line 293, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .spinner {
   border: 5px solid #818181;
   border-radius: 50%;
