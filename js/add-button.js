@@ -14,3 +14,11 @@ function addButton(show) {
 
 
   
+  function appendDatoButton(show) {
+    let menu = document.querySelector('.add-dato')
+    if (menu.style.display === "none") {
+        menu.style.display = "flex";
+      } else {
+        menu.style.display = "none";
+      }
+  }

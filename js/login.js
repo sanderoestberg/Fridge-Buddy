@@ -130,13 +130,19 @@ function appendMadvarer(madvarer) {
   for (let mad of madvarer) {
     htmlTemplate += `
       <article class="madvarer">
-      <div class="mad highlight">
+      <div class="mad highlight" onclick="appendDatoButton()">
       <h4>${mad.title}</h4>
-      <p>${mad.holdbarhed}</p>
+      <p>Vejledende Holdbarhed<br>${mad.holdbarhed}</p>
       <img src="${mad.img}">
     </div>
     </article>
+    <article class="add-dato" style="display:none;" >
+      <p>Udløbsdato</p><input type="date">
+      <button type="button">Tilføj</button>
+      </article>
     `;
   }
   document.querySelector('#add-menu-forslag').innerHTML = htmlTemplate;
-}
+} /* <input type="number" max="2"><span>/</span>
+<input type="number" max="2"><span>/</span>
+<input type="number" max="4"> */
