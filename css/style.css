@@ -340,7 +340,11 @@ h1 {
   margin-top: 10%; }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-/* line 377, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 378, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+#recipe h1 {
+  margin-top: 15px; }
+
+/* line 383, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #recipe-container {
   margin-top: 30px;
   display: flex;
@@ -349,17 +353,17 @@ h1 {
   justify-content: center;
   width: 100%;
   height: auto; }
-  /* line 385, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 391, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #recipe-container img {
     width: 100%;
     height: auto;
     border: 2px solid #818181;
     border-radius: 7px; }
-  /* line 391, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 397, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #recipe-container p {
     height: 94px; }
 
-/* line 396, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 402, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .children {
   width: 46%;
   max-width: 400px;
@@ -367,7 +371,7 @@ h1 {
   padding: 2% 2%;
   text-align: left; }
 
-/* line 403, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 409, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .recipesearch {
   border: 1px solid #818181;
   border-radius: 7px;
@@ -375,7 +379,7 @@ h1 {
   width: 90%;
   margin: 15px 5% 15px 5%; }
 
-/* line 411, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 417, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 input, select {
   -webkit-appearance: none;
   width: 90%;
@@ -389,7 +393,7 @@ input, select {
 
 /* loader */
 /* ---------- loader styling ---------- */
-/* line 427, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 433, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #loader {
   position: fixed;
   left: 0px;
@@ -401,7 +405,7 @@ input, select {
   background-color: none;
   text-align: center; }
 
-/* line 439, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 445, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .spinner {
   border: 5px solid #818181;
   border-radius: 50%;
