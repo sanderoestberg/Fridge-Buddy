@@ -21,6 +21,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function userAuthenticated(user) {
+  appendUserData(user);
   _currentUser = user;
   hideTabbar(false);
   //init();
@@ -70,4 +71,24 @@ function logout() {
   document.querySelector('#birthdate').value = "";
   document.querySelector('#hairColor').value = "";
   document.querySelector('#imagePreview').src = "";*/
+}
+
+function appendUserData(user) {
+  document.querySelector('#profile').innerHTML += `
+  <h2 class="page_overskrift"> Profil oplysninger </h2>
+  <section class="profil-oplysninger">
+  <article id="profil_center">
+  <img src="images/profile-icon.svg">
+  </article>
+  <article>
+    <h5>navn</h5>
+    <h3>${user.displayName}</h3>
+    <div class="line"></div>
+    </article>
+    <article>
+    <h5>email</h5>
+    <p>${user.email}</p>
+    <div class="line"></div>
+    </article>
+  </section>`;
 }
