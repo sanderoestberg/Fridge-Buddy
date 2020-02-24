@@ -146,6 +146,7 @@ h1 {
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.20);
   font-size: 40px;
   font-weight: 500;
+  z-index: 100;
 
   p {
     display: flex;
@@ -164,8 +165,22 @@ h1 {
   transform: rotate(45deg)
 }
 
-#add-button-menu {
+.add-button-menu {
   display: none;
+  position: absolute;
+  top: 80px;
+  background-color: white;
+  border: 2px solid $darkgrey;
+  border-radius: 25px;
+  width: 80%;
+  height: 76vh;
+  margin: 3.5%;
+  padding: 3%;
+  
+}
+
+.highlight{
+    background-color: $lightgrey;
 }
 
 /* ---------- HIDE ---------- */
