@@ -335,7 +335,11 @@ h1 {
   margin-top: 10%; }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-/* line 372, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 373, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+#recipe h1 {
+  margin-top: 15px; }
+
+/* line 378, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #recipe-container {
   margin-top: 30px;
   display: flex;
@@ -344,17 +348,17 @@ h1 {
   justify-content: center;
   width: 100%;
   height: auto; }
-  /* line 380, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 386, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   #recipe-container img {
     width: 100%;
     height: auto;
     border: 2px solid #818181;
     border-radius: 7px; }
-  /* line 386, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 392, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   #recipe-container p {
     height: 94px; }
 
-/* line 391, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 397, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .children {
   width: 46%;
   max-width: 400px;
@@ -362,7 +366,7 @@ h1 {
   padding: 2% 2%;
   text-align: left; }
 
-/* line 398, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 404, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .recipesearch {
   border: 1px solid #818181;
   border-radius: 7px;
@@ -370,7 +374,7 @@ h1 {
   width: 90%;
   margin: 15px 5% 15px 5%; }
 
-/* line 406, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 412, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 input, select {
   -webkit-appearance: none;
   width: 90%;
@@ -384,7 +388,7 @@ input, select {
 
 /* loader */
 /* ---------- loader styling ---------- */
-/* line 422, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 428, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #loader {
   position: fixed;
   left: 0px;
@@ -396,7 +400,7 @@ input, select {
   background-color: none;
   text-align: center; }
 
-/* line 434, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 440, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .spinner {
   border: 5px solid #818181;
   border-radius: 50%;
