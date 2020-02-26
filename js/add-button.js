@@ -26,6 +26,3 @@ function addButton(show) {
       }
   }
 
-
-
-  add-menu-animation

@@ -52,9 +52,9 @@ h1 {
 
 /* styling af topbar */
 .topbar {
-  background-color: $darkgrey;
+  background-color: $topbar;
   color: $topbar;
-  padding: 20px;
+  padding: 5px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -63,24 +63,14 @@ h1 {
   z-index: 9999;
   @extend %shadow;
   justify-content: space-around;
-}
+  max-height: 64px;
 
-.topbar h2 {
-  margin: 0;
-  font-weight: 300;
-}
-
-.topbar a {
-  text-decoration: none;
-  position: absolute;
-  top: 27px;
-  color: $lightgrey;
+  a img {
+      max-height: 50px;
+  }
 }
 
 
-.topbar a.right {
-  right: 20px;
-}
 
 /* styling af tabbar */
 .tabbar {

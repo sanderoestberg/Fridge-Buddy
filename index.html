@@ -8,14 +8,17 @@
   <title>Untitled document</title>
   <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
   <meta name="author" content="Johanne, Sander og Oskar">
-  <!--  <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
   <link rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 
 <body onhashchange="pageChange()">
   <div class="topbar">
-    <h2>FRIDGE BUDDY</h2>
+    <!--<a href="#" onclick="history.go(-1)"><img src="images/favicon.png.svg"></a>-->
+    <a href="#fridge"><img src="images/logo.svg" alt="Fridge Buddy Logo"></a>
+    <!--<a href="#profile"> <img src="images\profile2-icon.svg"> </a>-->
+
   </div>
 
   <!-- navigation til vores SPA -->
@@ -23,8 +26,7 @@
     <a href="#recipe"> <img src="images\hat-icon.svg"> </a>
     <a href="#fridge"> <img src="images\fridge-icon.svg"> </a>
     <a href="#shoplist"> <img src="images\shoplist-icon.svg"> </a>
-    <a href="#profile"> <img src="images\profile2-icon.svg"> </a>
-
+    
   </nav>
 
   <section id="fridge" class="page">
