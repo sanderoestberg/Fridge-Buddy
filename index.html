@@ -5,12 +5,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-  <title>Untitled document</title>
+  <title>Fridge Buddy</title>
   <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
   <meta name="author" content="Johanne, Sander og Oskar">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
   <link rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/tko2nny.css">
 </head>
 
 <body onhashchange="pageChange()">
@@ -86,7 +87,7 @@
 <!--Indkøbsliste Side-->
   <section id="shoplist" class="page">
     <h2 class="page_overskrift">
-     
+
       Indkøbsliste
     </h2>
 
@@ -98,13 +99,13 @@
     <label class="container">Mælk
         <input type="checkbox" name="madvarer" checked="checked" value="bar1">
         <span class="checkmark"></span>
-      </label> 
+      </label>
 </section>
-  
+
   <div id="add-button" onclick="addButton()">
     <p>+</p>
   </div>
-  
+
   <section id="flex_shop">
   <div class="shop_knap">
   <input type="button" value="Marker alle" onclick='selectAll();'>
@@ -120,7 +121,7 @@
 
 <!-- Opskrift side -->
   <section id="recipe" class="page">
-    <h1>Find din opskrift her</h1>
+    <h2 class="page_overskrift">Find din opskrift her</h2>
     <input class="recipesearch" type="search" placeholder="Søg efter madvare" onkeyup="search(this.value)">
 
     <section id="recipe-container" class="recipe-flex"></section>
