@@ -31,21 +31,20 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
-  color: #707070;
-  text-transform: uppercase; }
+  color: #707070; }
 
-/* line 56, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 54, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px; }
 
-/* line 62, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 60, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 h4 {
   font-weight: 350; }
 
 /* styling af topbar */
-/* line 67, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 65, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #F6F6F6;
   color: #F6F6F6;
@@ -59,7 +58,7 @@ h4 {
   width: 100%;
   display: flex;
   justify-content: center; }
-  /* line 82, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 80, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   .topbar .topbar-flex {
     display: flex;
     flex-wrap: nowrap;
@@ -67,28 +66,28 @@ h4 {
     align-items: center;
     justify-content: space-between;
     width: 90%; }
-  /* line 91, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 89, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   .topbar a img {
     width: 30px;
     height: auto; }
 
-/* line 98, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 96, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .left {
   padding-right: 31px; }
 
-/* line 102, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 100, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .right {
   text-decoration: none;
   font-weight: bold;
   color: #3b3b3b; }
 
-/* line 107, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 105, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #logo {
   max-height: 50px;
   transform-origin: center; }
 
 /* styling af tabbar */
-/* line 116, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 114, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #F6F6F6;
   position: fixed;
@@ -96,28 +95,28 @@ h4 {
   left: 0;
   right: 0;
   z-index: 9999; }
-  /* line 124, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 122, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   .tabbar img {
     height: 40px;
     width: auto; }
 
 /* Style på og omkring links i baren */
-/* line 131, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 129, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
   padding: 10px 26px; }
 
 /* style ved hover */
-/* line 138, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 136, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
 /* style når en side er aktiv*/
-/* line 143, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 141, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
-/* line 147, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 145, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .page {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
@@ -136,7 +135,7 @@ h4 {
     opacity: 1; } }
 
 /* FRIDGE SECTION */
-/* line 172, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 170, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
   height: 64px;
@@ -150,7 +149,7 @@ h4 {
   font-size: 40px;
   font-weight: 500;
   z-index: 100; }
-  /* line 186, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 184, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #add-button p {
     display: flex;
     height: 64px;
@@ -158,12 +157,12 @@ h4 {
     align-items: center;
     color: #3b3b3b; }
 
-/* line 198, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 196, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
   transition-duration: 200ms;
   transform: rotate(45deg); }
 
-/* line 203, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 201, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .add-button-menu {
   display: none;
   position: absolute;
@@ -184,12 +183,12 @@ h4 {
 
  */ }
 
-/* line 224, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 222, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .add-dato {
   display: none;
   align-items: center; }
 
-/* line 231, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 229, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .add-menu-animation {
   animation-name: open-menu;
   animation-duration: 0.3s;
@@ -203,22 +202,22 @@ h4 {
     opacity: 1;
     transform: scale(1); } }
 
-/* line 248, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 246, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .highlight {
   background-color: #E6E6E6; }
-  /* line 250, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 248, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   .highlight p {
     color: #818181; }
 
 /* ---------- HIDE ---------- */
-/* line 256, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 254, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .hide {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 0.4s, opacity 0.4s linear; }
 
 /* ---------- authentication styling ---------- */
-/* line 263, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 261, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #firebaseui-auth-container {
   position: absolute;
   top: 50%;
@@ -226,19 +225,19 @@ h4 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* line 271, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 269, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-container {
   font-family: var(--font-family);
   font: 16px var(--font-family); }
 
-/* line 276, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 274, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-title {
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-/* line 283, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 281, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .mdl-button--raised.mdl-button--colored,
 .mdl-button--raised.mdl-button--colored:active,
 .mdl-button--raised.mdl-button--colored:hover {
@@ -246,12 +245,12 @@ h4 {
   color: #fff;
   border-radius: 0; }
 
-/* line 291, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 289, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {
   background-color: var(--green); }
 
 /* ---------- profile ---------- */
-/* line 296, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 294, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger {
   display: flex;
   margin-top: 10%;
@@ -264,64 +263,66 @@ h4 {
   flex-direction: column;
   justify-content: center; }
 
-/* line 309, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 307, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger img {
   width: 12%;
   align-content: center; }
 
-/* line 314, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 312, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .line {
   width: 66%;
   border-bottom: 1px solid black; }
 
-/* line 319, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 317, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger h5 {
   text-transform: uppercase;
   margin: 1% 0;
   font-size: 1.1em; }
 
-/* line 325, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 323, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger h3 {
   font-size: 1.2em; }
 
-/* line 329, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 327, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger p {
   font-size: 1.2em; }
 
-/* line 333, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 331, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger article {
   margin: 7% 0;
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-/* line 340, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 338, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #profil_center {
   margin: 0; }
 
 /* ---------- SHOPLIST---------- */
-/* line 346, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 344, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #shoplist_baggrund {
   background-image: url("../../images/indkoebsseddel.svg");
-  height: 60vh;
-  width: 100%;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px; }
+
+/* line 352, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+#width-shoplist {
+  max-width: 60vh;
+  margin: 0 auto; }
 
 /* The container */
-/* line 355, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 357, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container {
   top: 15%;
-  left: 13%;
-  transform: translate(-10%, -10%);
-  width: 80%;
-  max-width: 300px;
   height: 10vh;
   border-style: solid;
   border-color: grey;
   border-radius: 25px;
   padding: 0 5%;
   position: relative;
+  margin: 0 5%;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -338,7 +339,7 @@ h4 {
   margin-top: 10%; }
 
 /* Hide the browser's default checkbox */
-/* line 381, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 382, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container input {
   position: absolute;
   opacity: 0;
@@ -348,7 +349,7 @@ h4 {
   background-color: #818181; }
 
 /* Create a custom checkbox */
-/* line 391, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 392, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .checkmark {
   position: absolute;
   top: 30%;
@@ -361,29 +362,29 @@ h4 {
   border-color: #E6E6E6; }
 
 /* On mouse-over, add a grey background color */
-/* line 404, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 405, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container:hover input ~ .checkmark {
   background-color: #818181; }
 
 /* When the checkbox is checked, add a blue background */
-/* line 409, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 410, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container input:checked ~ .checkmark {
   background-color: #818181; }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-/* line 414, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 415, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none; }
 
 /* Show the checkmark when checked */
-/* line 421, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 422, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container input:checked ~ .checkmark:after {
   display: block; }
 
 /* Style the checkmark/indicator */
-/* line 426, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 427, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -395,7 +396,7 @@ h4 {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-/* line 438, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 439, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .shop_knap {
   width: 33%;
   height: 6vh;
@@ -407,29 +408,46 @@ h4 {
   align-items: center;
   justify-content: center; }
 
-/* line 451, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 452, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+.shop_knap p {
+  font-size: 0.9em;
+  color: white; }
+
+/* line 457, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+#input_markerAlle, textarea {
+  background-color: #818181;
+  color: white;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 0.9em;
+  padding: 0;
+  text-transform: uppercase; }
+
+/* line 468, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex_shop {
   display: flex;
   flex-direction: row;
-  margin-top: 3%; }
+  margin-top: 3%;
+  justify-content: center; }
 
-/* line 457, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 475, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex_shop div {
   margin: 0 2%; }
 
-/* line 461, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 479, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .skraldespand {
   width: 100%;
   height: 5vh; }
 
-/* line 465, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 483, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .skraldespand img {
   height: 4vh;
   float: right;
   margin-right: 7%; }
 
 /* ---------- Indhold køleskab---------- */
-/* line 471, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 489, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand {
   display: flex;
   align-items: flex-end;
@@ -437,12 +455,12 @@ h4 {
   padding: 0 6% 0 3%;
   margin-top: 5%; }
 
-/* line 479, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 497, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand img {
   width: 8%;
   height: 5vh; }
 
-/* line 484, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 502, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand h3 {
   text-transform: uppercase;
   text-align: left;
@@ -453,7 +471,7 @@ h4 {
   color: #5D5A5A;
   letter-spacing: 2px; }
 
-/* line 496, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 514, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .mad {
   display: flex;
   width: 90%;
@@ -466,22 +484,22 @@ h4 {
   padding: 0 5%;
   align-items: center; }
 
-/* line 510, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 528, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .mad h4 {
   font-size: 1.3em; }
 
-/* line 514, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 532, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .madvarer {
   max-width: 100%;
   justify-content: center;
   display: flex; }
 
-/* line 520, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 538, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .madvarer img {
   width: 9%;
   height: 9vh; }
 
-/* line 525, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 543, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .cirkler {
   border: 2px solid #818181;
   border-radius: 100px;
@@ -489,40 +507,40 @@ h4 {
   width: 30px;
   height: 30px; }
 
-/* line 533, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 551, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler {
   display: flex;
   justify-content: space-between;
   margin: 0 15%;
   margin-top: 5%; }
 
-/* line 540, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 558, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .udløbet {
   background-color: #DDA7A7; }
 
-/* line 544, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 562, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .udløber {
   background-color: #E0DAAB; }
 
-/* line 549, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 567, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .frisk {
   background-color: #C9DDCA; }
 
-/* line 554, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 572, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler article {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-/* line 560, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 578, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #flex-cirkler p {
   text-transform: uppercase;
   margin-top: 15%; }
 
-/* line 566, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 584, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .page_overskrift {
   text-transform: uppercase;
-  margin-top: 10%;
+  margin-top: 6%;
   font-family: abolition, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -531,11 +549,11 @@ h4 {
   letter-spacing: 2px; }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-/* line 578, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
-#recipe h1 {
+/* line 596, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+#recipe h2 {
   margin-top: 15px; }
 
-/* line 583, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 601, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #recipe-container {
   margin-top: 30px;
   display: flex;
@@ -544,33 +562,30 @@ h4 {
   justify-content: center;
   width: 100%;
   height: auto; }
-  /* line 592, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+  /* line 610, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
   #recipe-container img {
     width: 100%;
     height: auto;
     border: 2px solid #818181;
     border-radius: 7px; }
-  /* line 599, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
-  #recipe-container p {
-    height: 94px; }
 
-/* line 604, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 619, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .children {
   width: 46%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   padding: 2% 2%;
   text-align: left; }
 
-/* line 612, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 627, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .recipesearch {
   border: 1px solid #818181;
   border-radius: 7px;
   color: #818181;
   width: 90%;
-  margin: 15px 5% 15px 5%; }
+  margin: 15px auto; }
 
-/* line 620, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 635, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 input,
 select {
   -webkit-appearance: none;
@@ -584,7 +599,7 @@ select {
 
 /* loader */
 /* ---------- loader styling ---------- */
-/* line 636, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 651, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 #loader {
   position: fixed;
   left: 0px;
@@ -596,7 +611,7 @@ select {
   background-color: none;
   text-align: center; }
 
-/* line 648, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
+/* line 663, ../../../../../Documents/GitHub/Fridge-Buddy/scss/style.scss */
 .spinner {
   border: 5px solid #818181;
   border-radius: 50%;

@@ -84,7 +84,7 @@
     </div>
     <article class="add-button-menu" style="display:none;">
       <article>
-        <h2>TILFØJ NYE MADVARE TIL DIT KØLESKAB</h2>
+        <h2 class="page_overskrift">TILFØJ NYE MADVARE TIL DIT KØLESKAB</h2>
         <input type="search" placeholder="Search" onkeyup="search(this.value)">
       </article>
       <br>
@@ -102,24 +102,27 @@
       Indkøbsliste
     </h2>
 
+    <section id="width-shoplist">
     <div class="skraldespand">
           <img src="images/skraldespandlys.svg" alt="slet-knap">
   </div>
 
   <section id="shoplist_baggrund">
-    <label class="container">Mælk
+    <article class="container">
+    <label >Mælk
         <input type="checkbox" name="madvarer" checked="checked" value="bar1">
         <span class="checkmark"></span>
       </label>
+    </article>
 </section>
 
-  <div id="add-button" onclick="addButton()">
+<!--   <div id="add-button" onclick="addButton()">
     <p>+</p>
-  </div>
+  </div> -->
 
   <section id="flex_shop">
   <div class="shop_knap">
-  <input type="button" value="Marker alle" onclick='selectAll();'>
+  <input type="button" id="input_markerAlle" value="Marker alle" onclick='selectAll();'>
   </div>
 
   <div class="shop_knap">
@@ -127,6 +130,8 @@
   </div>
 </div>
 </section>
+</section>
+
 </section>
 
 

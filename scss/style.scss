@@ -47,9 +47,7 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
-  color: #707070;
-  text-transform: uppercase;
-
+  color: #707070
 }
 
 
@@ -345,24 +343,26 @@ color: #3b3b3b;
 
 #shoplist_baggrund {
   background-image: url('../../images/indkoebsseddel.svg');
-  height: 60vh;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+}
+
+#width-shoplist {
+  max-width: 60vh; margin: 0 auto;
 }
 
 /* The container */
 .container{
   top: 15%;
-  left: 13%;
-  transform: translate(-10%, -10%);
-  width: 80%; max-width: 300px;
   height: 10vh;
   border-style: solid;
   border-color: grey;
   border-radius: 25px;
   padding: 0 5%;
   position: relative;
+  margin: 0 5%;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -375,6 +375,7 @@ color: #3b3b3b;
 
 #shoplist_baggrund div {
   margin-top: 10%;
+  
 }
 
 /* Hide the browser's default checkbox */
@@ -448,10 +449,27 @@ color: #3b3b3b;
 
 }
 
+.shop_knap p {
+  font-size: 0.9em;
+  color: white;
+}
+
+#input_markerAlle, textarea {
+  background-color: $darkgrey;
+  color: white;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 0.9em;
+  padding: 0;
+  text-transform: uppercase;
+}
+
 #flex_shop {
   display: flex;
   flex-direction: row;
   margin-top: 3%;
+  justify-content: center;
 }
 
 #flex_shop div {
@@ -565,7 +583,7 @@ width: 100%; height: 5vh;
 
 .page_overskrift {
   text-transform: uppercase;
-  margin-top: 10%;
+  margin-top: 6%;
   font-family: abolition, sans-serif;
   font-style: normal;
 font-weight: 400;
@@ -575,7 +593,7 @@ font-weight: 400;
 
 /* RECIPEEEEEEEEEEEEEEEES */
 #recipe{
-  h1{
+  h2{
     margin-top: 15px;
   }
 }
@@ -596,14 +614,11 @@ font-weight: 400;
     border-radius: 7px;
   }
 
-  p {
-    height: 94px;
-  }
 }
 
 .children {
   width: 46%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   padding: 2% 2%;
   text-align: left;
@@ -614,7 +629,7 @@ font-weight: 400;
   border-radius: 7px;
   color: $darkgrey;
   width: 90%;
-  margin: 15px 5% 15px 5%;
+  margin: 15px auto;
 }
 
 input,
