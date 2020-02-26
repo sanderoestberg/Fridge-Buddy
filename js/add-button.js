@@ -11,8 +11,6 @@ function addButton(show) {
         btn.classList.remove("rotate-trans");
       }
   }
-
-
   
   function appendDatoButton(show) {
     let menu = document.querySelector('.add-dato')

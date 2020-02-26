@@ -283,9 +283,97 @@ h1 {
 }
 
 /* ---------- SHOPLIST---------- */
-#shoplist img {
-  width: 90%;
-  margin-top: 3%;
+
+#shoplist_baggrund {
+  background-image: url('../../images/indkoebsseddel.svg');
+  height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* The container */
+.container{
+  top: 15%;
+  left: 13%;
+  transform: translate(-10%, -10%);
+  width: 80%; max-width: 300px;
+  height: 10vh;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 25px;
+  padding: 0 5%;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex; align-items: center;
+  text-transform: uppercase; font-size: 1em;
+}
+
+#shoplist_baggrund div {
+  margin-top: 10%;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  background-color: $darkgrey;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top:30%;
+  left: 80%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+  border: solid 0.5px;
+  border-color: $lightgrey;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: $darkgrey;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: $darkgrey;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .shop_knap {
@@ -301,18 +389,10 @@ h1 {
 
 }
 
-.shop_knap p {
-  font-size: 0.7em;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-}
-
 #flex_shop {
   display: flex;
   flex-direction: row;
   margin-top: 3%;
-  justify-content: center;
 }
 
 #flex_shop div {
@@ -320,12 +400,12 @@ h1 {
 }
 
 .skraldespand {
-  display: flex; float: right; height: 5vh; width: 100%;
+width: 100%; height: 5vh;
   }
 
-.skraldespand img {
-  width: 10%;
-}
+  .skraldespand img {
+   height: 4vh; float: right; margin-right: 7%;
+  }
 
 /* ---------- Indhold køleskab---------- */
 
@@ -475,7 +555,6 @@ select {
   padding: 12px 12px;
   box-sizing: border-box;
   display: block;
-  background: #fff;
   border: 0;
   border-radius: 0;
 }
