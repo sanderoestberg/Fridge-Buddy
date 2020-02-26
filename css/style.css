@@ -31,21 +31,20 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
-  color: #707070;
-  text-transform: uppercase; }
+  color: #707070; }
 
-/* line 56, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 54, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px; }
 
-/* line 62, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 60, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 h4 {
   font-weight: 350; }
 
 /* styling af topbar */
-/* line 67, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 65, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .topbar {
   background-color: #F6F6F6;
   color: #F6F6F6;
@@ -58,12 +57,12 @@ h4 {
   z-index: 9999;
   justify-content: space-around;
   max-height: 64px; }
-  /* line 81, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 79, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   .topbar a img {
     max-height: 50px; }
 
 /* styling af tabbar */
-/* line 89, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 87, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar {
   background-color: #F6F6F6;
   position: fixed;
@@ -71,28 +70,28 @@ h4 {
   left: 0;
   right: 0;
   z-index: 9999; }
-  /* line 97, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 95, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   .tabbar img {
     height: 40px;
     width: auto; }
 
 /* Style på og omkring links i baren */
-/* line 104, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 102, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a {
   display: inline-block;
   padding: 10px 26px; }
 
 /* style ved hover */
-/* line 111, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 109, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a:hover {
   background-color: #E6E6E6; }
 
 /* style når en side er aktiv*/
-/* line 116, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 114, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .tabbar a.active {
   background-color: #E6E6E6; }
 
-/* line 120, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 118, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .page {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
@@ -111,7 +110,7 @@ h4 {
     opacity: 1; } }
 
 /* FRIDGE SECTION */
-/* line 145, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 143, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #add-button {
   width: 64px;
   height: 64px;
@@ -125,7 +124,7 @@ h4 {
   font-size: 40px;
   font-weight: 500;
   z-index: 100; }
-  /* line 159, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 157, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   #add-button p {
     display: flex;
     height: 64px;
@@ -133,12 +132,12 @@ h4 {
     align-items: center;
     color: #3b3b3b; }
 
-/* line 171, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 169, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .rotate-trans {
   transition-duration: 200ms;
   transform: rotate(45deg); }
 
-/* line 176, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 174, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .add-button-menu {
   display: none;
   position: absolute;
@@ -159,12 +158,12 @@ h4 {
 
  */ }
 
-/* line 197, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 195, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .add-dato {
   display: none;
   align-items: center; }
 
-/* line 204, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 202, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .add-menu-animation {
   animation-name: open-menu;
   animation-duration: 0.3s;
@@ -178,22 +177,22 @@ h4 {
     opacity: 1;
     transform: scale(1); } }
 
-/* line 221, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 219, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .highlight {
   background-color: #E6E6E6; }
-  /* line 223, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 221, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   .highlight p {
     color: #818181; }
 
 /* ---------- HIDE ---------- */
-/* line 229, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 227, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .hide {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 0.4s, opacity 0.4s linear; }
 
 /* ---------- authentication styling ---------- */
-/* line 236, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 234, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #firebaseui-auth-container {
   position: absolute;
   top: 50%;
@@ -201,19 +200,19 @@ h4 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* line 244, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 242, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .firebaseui-container {
   font-family: var(--font-family);
   font: 16px var(--font-family); }
 
-/* line 249, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 247, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .firebaseui-title {
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-/* line 256, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 254, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .mdl-button--raised.mdl-button--colored,
 .mdl-button--raised.mdl-button--colored:active,
 .mdl-button--raised.mdl-button--colored:hover {
@@ -221,12 +220,12 @@ h4 {
   color: #fff;
   border-radius: 0; }
 
-/* line 264, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 262, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {
   background-color: var(--green); }
 
 /* ---------- profile ---------- */
-/* line 269, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 267, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger {
   display: flex;
   margin-top: 10%;
@@ -239,43 +238,43 @@ h4 {
   flex-direction: column;
   justify-content: center; }
 
-/* line 282, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 280, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger img {
   width: 12%;
   align-content: center; }
 
-/* line 287, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 285, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .line {
   width: 66%;
   border-bottom: 1px solid black; }
 
-/* line 292, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 290, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger h5 {
   text-transform: uppercase;
   margin: 1% 0;
   font-size: 1.1em; }
 
-/* line 298, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 296, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger h3 {
   font-size: 1.2em; }
 
-/* line 302, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 300, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger p {
   font-size: 1.2em; }
 
-/* line 306, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 304, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .profil-oplysninger article {
   margin: 7% 0;
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-/* line 313, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 311, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #profil_center {
   margin: 0; }
 
 /* ---------- SHOPLIST---------- */
-/* line 319, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 317, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #shoplist_baggrund {
   background-image: url("../../images/indkoebsseddel.svg");
   height: 60vh;
@@ -284,7 +283,7 @@ h4 {
   background-repeat: no-repeat; }
 
 /* The container */
-/* line 328, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 326, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container {
   top: 15%;
   left: 13%;
@@ -308,12 +307,12 @@ h4 {
   text-transform: uppercase;
   font-size: 1em; }
 
-/* line 349, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 347, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #shoplist_baggrund div {
   margin-top: 10%; }
 
 /* Hide the browser's default checkbox */
-/* line 354, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 352, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container input {
   position: absolute;
   opacity: 0;
@@ -323,7 +322,7 @@ h4 {
   background-color: #818181; }
 
 /* Create a custom checkbox */
-/* line 364, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 362, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .checkmark {
   position: absolute;
   top: 30%;
@@ -336,29 +335,29 @@ h4 {
   border-color: #E6E6E6; }
 
 /* On mouse-over, add a grey background color */
-/* line 377, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 375, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container:hover input ~ .checkmark {
   background-color: #818181; }
 
 /* When the checkbox is checked, add a blue background */
-/* line 382, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 380, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container input:checked ~ .checkmark {
   background-color: #818181; }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-/* line 387, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 385, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none; }
 
 /* Show the checkmark when checked */
-/* line 394, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 392, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container input:checked ~ .checkmark:after {
   display: block; }
 
 /* Style the checkmark/indicator */
-/* line 399, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 397, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -370,7 +369,7 @@ h4 {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-/* line 411, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 409, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .shop_knap {
   width: 33%;
   height: 6vh;
@@ -382,29 +381,29 @@ h4 {
   align-items: center;
   justify-content: center; }
 
-/* line 424, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 422, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #flex_shop {
   display: flex;
   flex-direction: row;
   margin-top: 3%; }
 
-/* line 430, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 428, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #flex_shop div {
   margin: 0 2%; }
 
-/* line 434, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 432, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .skraldespand {
   width: 100%;
   height: 5vh; }
 
-/* line 438, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 436, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .skraldespand img {
   height: 4vh;
   float: right;
   margin-right: 7%; }
 
 /* ---------- Indhold køleskab---------- */
-/* line 444, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 442, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand {
   display: flex;
   align-items: flex-end;
@@ -412,12 +411,12 @@ h4 {
   padding: 0 6% 0 3%;
   margin-top: 5%; }
 
-/* line 452, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 450, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand img {
   width: 8%;
   height: 5vh; }
 
-/* line 457, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 455, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #indhold-skraldespand h3 {
   text-transform: uppercase;
   text-align: left;
@@ -428,7 +427,7 @@ h4 {
   color: #5D5A5A;
   letter-spacing: 2px; }
 
-/* line 469, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 467, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .mad {
   display: flex;
   width: 90%;
@@ -441,22 +440,22 @@ h4 {
   padding: 0 5%;
   align-items: center; }
 
-/* line 483, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 481, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .mad h4 {
   font-size: 1.3em; }
 
-/* line 487, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 485, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .madvarer {
   max-width: 100%;
   justify-content: center;
   display: flex; }
 
-/* line 493, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 491, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .madvarer img {
   width: 9%;
   height: 9vh; }
 
-/* line 498, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 496, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .cirkler {
   border: 2px solid #818181;
   border-radius: 100px;
@@ -464,37 +463,37 @@ h4 {
   width: 30px;
   height: 30px; }
 
-/* line 506, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 504, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #flex-cirkler {
   display: flex;
   justify-content: space-between;
   margin: 0 15%;
   margin-top: 5%; }
 
-/* line 513, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 511, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .udløbet {
   background-color: #DDA7A7; }
 
-/* line 517, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 515, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .udløber {
   background-color: #E0DAAB; }
 
-/* line 522, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 520, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .frisk {
   background-color: #C9DDCA; }
 
-/* line 527, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 525, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #flex-cirkler article {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-/* line 533, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 531, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #flex-cirkler p {
   text-transform: uppercase;
   margin-top: 15%; }
 
-/* line 539, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 537, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .page_overskrift {
   text-transform: uppercase;
   margin-top: 10%;
@@ -506,11 +505,11 @@ h4 {
   letter-spacing: 2px; }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-/* line 551, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
-#recipe h1 {
+/* line 549, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+#recipe h2 {
   margin-top: 15px; }
 
-/* line 556, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 554, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #recipe-container {
   margin-top: 30px;
   display: flex;
@@ -519,33 +518,30 @@ h4 {
   justify-content: center;
   width: 100%;
   height: auto; }
-  /* line 565, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+  /* line 563, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
   #recipe-container img {
     width: 100%;
     height: auto;
     border: 2px solid #818181;
     border-radius: 7px; }
-  /* line 572, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
-  #recipe-container p {
-    height: 94px; }
 
-/* line 577, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 572, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .children {
   width: 46%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   padding: 2% 2%;
   text-align: left; }
 
-/* line 585, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 580, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .recipesearch {
   border: 1px solid #818181;
   border-radius: 7px;
   color: #818181;
   width: 90%;
-  margin: 15px 5% 15px 5%; }
+  margin: 15px auto; }
 
-/* line 593, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 588, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 input,
 select {
   -webkit-appearance: none;
@@ -559,7 +555,7 @@ select {
 
 /* loader */
 /* ---------- loader styling ---------- */
-/* line 609, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 604, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 #loader {
   position: fixed;
   left: 0px;
@@ -571,7 +567,7 @@ select {
   background-color: none;
   text-align: center; }
 
-/* line 621, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
+/* line 616, ../../../3 sem/Web App SPA/Fridge-Buddy/scss/style.scss */
 .spinner {
   border: 5px solid #818181;
   border-radius: 50%;
