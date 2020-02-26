@@ -80,10 +80,41 @@
       </article>
     </article>
   </section>
+
 <!--Indkøbsliste Side-->
   <section id="shoplist" class="page">
+    <h2 class="page_overskrift">
+     
+      Indkøbsliste
+    </h2>
 
-  </section>
+    <div class="skraldespand">
+          <img src="images/skraldespandlys.svg" alt="slet-knap">
+  </div>
+
+  <section id="shoplist_baggrund">
+    <label class="container">Mælk
+        <input type="checkbox" name="madvarer" checked="checked" value="bar1">
+        <span class="checkmark"></span>
+      </label> 
+</section>
+  
+  <div id="add-button" onclick="addButton()">
+    <p>+</p>
+  </div>
+  
+  <section id="flex_shop">
+  <div class="shop_knap">
+  <input type="button" value="Marker alle" onclick='selectAll();'>
+  </div>
+
+  <div class="shop_knap">
+    <p>Overfør til køleskab</p>
+  </div>
+</div>
+</section>
+</section>
+
 
 <!-- Opskrift side -->
   <section id="recipe" class="page">
