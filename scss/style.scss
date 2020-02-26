@@ -173,24 +173,53 @@ h1 {
 .add-button-menu {
   display: none;
   position: absolute;
-  top: 80px;
   background-color: white;
   border: 2px solid $darkgrey;
   border-radius: 25px;
   width: 80%;
+  padding: 3%;
+  top: 80px;
+  right: 25px;
+  bottom: 75px;
+  transform-origin: bottom right;
+  /*
+  
+  
   height: 76vh;
   margin: 3.5%;
-  padding: 3%;
-
+  
+ */
 }
 
 .add-dato{
     display: none;
     align-items: center;
+    
 }
+
+
+.add-menu-animation{
+  animation-name: open-menu;
+  animation-duration: 0.3s;
+  transform-origin: bottom right;
+  
+  
+}
+
+@keyframes open-menu {
+  from {opacity: 0;
+    transform: scale(0);}
+  
+  to {opacity: 1;
+    transform: scale(1);}
+}
+
 
 .highlight {
   background-color: $lightgrey;
+  p{
+    color: $darkgrey;
+  }
 }
 
 /* ---------- HIDE ---------- */
