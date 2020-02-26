@@ -67,20 +67,47 @@ h4 {
 .topbar {
   background-color: $topbar;
   color: $topbar;
-  padding: 5px;
-  text-transform: uppercase;
+  padding: 5px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   @extend %shadow;
-  justify-content: space-around;
   max-height: 64px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
 
-  a img {
-      max-height: 50px;
+  .topbar-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
   }
+
+  a img{
+      width: 30px;
+      height: auto;
+
+  }
+}
+
+.left{
+    padding-right: 31px;
+}
+
+.right{
+text-decoration: none;
+font-weight: bold;
+color: #3b3b3b;
+}
+#logo{
+    max-height: 50px;
+    transform-origin: center;
+
 }
 
 
