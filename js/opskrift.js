@@ -42,8 +42,8 @@ function appendRecipes(recipes) {
         <img src="${recipe.acf.img}">
         <h2>${recipe.title.rendered}</h2>
         <h3>~ ${recipe.acf.time} minutter ~</h3>
-        <p>${recipe.acf.description}</p> <br>
         <div class="moreInfo" style="display: none;">
+        <p>${recipe.acf.description}</p> <br>
         <h4> Ingridienser </h4> <br>
         <ul>${recipe.acf.ingredients}</ul> <br>
           <h4> Step-By-Step </h4> <br>
@@ -61,12 +61,16 @@ function appendRecipes(recipes) {
 
 function myFunction(recipeslug) {
   console.log(recipeslug);
+  // child og moreinfo ændrer størrelsen på et "child" i containeren og viser extra information. Den folder sig ud ved tryk
+  let child = document.querySelector(`.${recipeslug}`)
   let moreinfo = document.querySelector(`.${recipeslug} .moreInfo`)
   console.log(moreinfo);
   if (moreinfo.style.display === "none") {
     moreinfo.style.display = "block";
+    child.style.width = "90%";
   } else {
     moreinfo.style.display = "none";
+    child.style.width = "46%";
   }
 
 }

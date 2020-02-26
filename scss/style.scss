@@ -47,9 +47,7 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
-  color: #707070;
-  text-transform: uppercase;
-
+  color: #707070
 }
 
 
@@ -568,7 +566,7 @@ font-weight: 400;
 
 /* RECIPEEEEEEEEEEEEEEEES */
 #recipe{
-  h1{
+  h2{
     margin-top: 15px;
   }
 }
@@ -589,14 +587,11 @@ font-weight: 400;
     border-radius: 7px;
   }
 
-  p {
-    height: 94px;
-  }
 }
 
 .children {
   width: 46%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   padding: 2% 2%;
   text-align: left;
@@ -607,7 +602,7 @@ font-weight: 400;
   border-radius: 7px;
   color: $darkgrey;
   width: 90%;
-  margin: 15px 5% 15px 5%;
+  margin: 15px auto;
 }
 
 input,
