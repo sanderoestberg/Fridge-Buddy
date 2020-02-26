@@ -35,11 +35,14 @@ body {
 }
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 350;
   height: 100%;
   text-align: center;
   width: 100%;
-  font-weight: 200;
+  color: #707070;
+  text-transform: uppercase;
 
 }
 
@@ -48,6 +51,10 @@ h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px;
+}
+
+h4 {
+  font-weight: 350;
 }
 
 /* styling af topbar */
@@ -454,7 +461,13 @@ width: 100%; height: 5vh;
 #indhold-skraldespand h3 {
   text-transform: uppercase;
   text-align: left;
-  font-size: 1.3em;
+  font-size: 1.8em;
+  font-family: abolition, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #5D5A5A;
+  letter-spacing: 2px;
+  
 }
 
 .mad {
@@ -530,6 +543,11 @@ width: 100%; height: 5vh;
 .page_overskrift {
   text-transform: uppercase;
   margin-top: 10%;
+  font-family: abolition, sans-serif;
+  font-style: normal;
+font-weight: 400;
+  font-size: 2.5em; color: #5D5A5A;
+  letter-spacing: 2px;
 }
 
 /* RECIPEEEEEEEEEEEEEEEES */
