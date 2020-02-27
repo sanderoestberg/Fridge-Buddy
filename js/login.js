@@ -21,10 +21,11 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function userAuthenticated(user) {
-  appendUserData(user);
+  //appendUserData(user);
   _currentUser = user;
   hideTabbar(false);
   init();
+  _spaService.showPage("fridge");
   //showLoader(false);
 }
 
@@ -47,32 +48,40 @@ function userNotAuthenticated() {
   //showLoader(false);
 }
 
-// show and hide tabbar
+// Show/Hide tab- og topbaren. Skal gemmes på login siden, og vises på alle andre sider. Ved hjælp af at tilføje og fjerne classen "hide"
 function hideTabbar(hide) {
   let tabbar = document.querySelector('#tabbar');
+  let topbar = document.querySelector('.topbar')
   if (hide) {
     tabbar.classList.add("hide");
+    topbar.classList.add("hide");
   } else {
     tabbar.classList.remove("hide");
+    topbar.classList.remove("hide");
   }
 }
 
+// Gør det muligt for HTML DOM'en at læse funktionen logout()
 window.logout = function () {
     logout();
 }
 
-// sign out user
+
+// Logout-funktion og reset på #name under profil siden med en tom string "".
 function logout() {
   firebase.auth().signOut();
   // reset input fields
-  /*
+ 
   document.querySelector('#name').value = "";
-  document.querySelector('#mail').value = "";
-  document.querySelector('#birthdate').value = "";
-  document.querySelector('#hairColor').value = "";
-  document.querySelector('#imagePreview').src = "";*/
 }
 
+//User data der skal vises på profil siden:
+function appendUserData() {
+  document.querySelector('#name').value = _currentUser.displayName;
+  document.querySelector('#mail').value = _currentUser.email;
+}
+
+/*
 function appendUserData(user) {
   document.querySelector('#profile').innerHTML += `
   <h2 class="page_overskrift"> Profil oplysninger </h2>
@@ -92,6 +101,7 @@ function appendUserData(user) {
     </article>
   </section>`;
 }
+*/
 
 // initialize movie references - all movies and user's favourite movies
 function init() {
@@ -105,7 +115,7 @@ function init() {
         ...userData.data()
       }; //concating two objects: authUser object and userData objec from the db
       appendUserData();
-      appendFavMovies(_currentUser.favMad);
+      appendFridge(_currentUser.Fridge);
       if (_madvarer) {
         appendMadvarer(_madvarer); // refresh movies when user data changes
       }
@@ -125,6 +135,8 @@ function init() {
   });
 }
 
+
+// Mad forslag under add-menu'en appended, ved hjælp af et for-loop kan vi iterere over al mad i vores databse "madvarer" og herefter ved hjælp af backtick eller template string `` få dem vist. 
 function appendMadvarer(madvarer) {
   let htmlTemplate = "";
   for (let mad of madvarer) {
@@ -138,9 +150,90 @@ function appendMadvarer(madvarer) {
     </article>
     <article class="${mad.title} add-dato" style="display:none;" >
       <p>Udløbsdato</p><input type="date">
-      <button type="button">Tilføj</button>
+      ${generateFavFridgeButton(mad.id)}
       </article>
     `;
   }
   document.querySelector('#add-menu-forslag').innerHTML = htmlTemplate;
+}
+
+// Tilføj-knappen under add-menuen bliver lavet her og srkevet ind i 'appendMadvarer' backtick-string. onclick der kører funktionen "addToFridge" og hvis Fridge eller undeholder det mad ID skal den ændre style og sige "tilføjet"
+
+function generateFavFridgeButton(madId) {
+  let btnTemplate = `
+    <button onclick="addToFridge('${madId}')">Tilføj</button>`;
+  if (_currentUser.Fridge && _currentUser.Fridge.includes(madId)) {
+    btnTemplate = `
+      <button onclick="addedToFridge('${madId}')" class="rm">Tilføjet</button>`;
+  }
+  return btnTemplate;
+}
+
+window.addToFridge = function () {
+  addToFridge();
+}
+
+
+function addToFridge(madId) {
+  //showLoader(true);
+  console.log(_currentUser.uid)
+  _userRef.doc(_currentUser.uid).set({
+    Fridge: firebase.firestore.FieldValue.arrayUnion(madId)
+  }, {
+    merge: true
+  });
+}
+window.addedToFridge = function () {
+  addedToFridge();
+}
+
+function addedToFridge(madId) {
+  //showLoader(true);
+  _userRef.doc(_currentUser.uid).set({
+    Fridge: firebase.firestore.FieldValue.arrayRemove(madId)
+  });
+}
+
+// onclick funktion på save-knappen under profil siden. 
+window.updateUser = function () {
+  updateUser();
+}
+
+function updateUser() {
+  let user = firebase.auth().currentUser;
+
+  // For at opdatere navnet under Firebase Auth properties.
+  user.updateProfile({
+    displayName: document.querySelector('#name').value
+  });
+
+  // Fot at opdatere og tilføje brugerens navn og email i Databasen "users" 
+  _userRef.doc(_currentUser.uid).set({
+    displayName: document.querySelector('#name').value,
+    email: document.querySelector('#mail').value
+
+  }, {
+    merge: true
+  });
+}
+
+async function appendFridge(FridgeIds = []) {
+  let htmlTemplate = "";
+  if (FridgeIds.length === 0) {
+    htmlTemplate = "<p>Please, add movies to favourites.</p>";
+  } else {
+    for (let madId of FridgeIds) {
+      await _madRef.doc(madId).get().then(function (doc) {
+        let mad = doc.data();
+        mad.id = doc.id;
+        htmlTemplate += `
+        <article>
+          <h4>${mad.title}</h4>
+          <img src="${mad.img}">
+        </article>
+      `;
+      });
+    }
+  }
+  document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
 }

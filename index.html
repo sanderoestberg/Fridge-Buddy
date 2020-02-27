@@ -15,15 +15,13 @@
 </head>
 
 <body onhashchange="pageChange()">
-  <nav class="">
-  <div class="topbar">
+  <div class="topbar hide">
     <div class="topbar-flex">
       <a href="#" onclick="history.go(-1)"><img src="images/pil.svg"></a>
       <img src="images/logo.svg" id="logo" alt="Fridge Buddy Logo">
       <a href="#profile"> <img src="images\profile-icon.svg" class="man"> </a>
     </div>
   </div>
-</nav>
   <!-- login page -->
   <section id="login" class="page">
     <header class="topbar">
@@ -153,7 +151,13 @@
       <a class="right" href="#login" onclick="logout()">Logout</a>
     </div>
     </div>
-
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Type your name" required>
+      <label for="mail">Mail</label>
+      <input type="email" id="mail" placeholder="Type your mail" disabled>
+      <button type="button" name="button" onclick="updateUser()">Save</button>
+    </form>
   </section>
 
   
