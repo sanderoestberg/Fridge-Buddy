@@ -1,19 +1,16 @@
 import SpaService from "./spa-service.js";
+import shoplist from "./shoplist.js";
 
 let _spaService = new SpaService("login");
+let _shoplist = new shoplist();
 
 window.pageChange = function () {
     _spaService.pageChange();
 }
 
 window.selectAll = function () {
-    selectAll();
+    _shoplist.selectAll();
 }
 
-function selectAll(){
-    var items=document.getElementsByName('madvarer');
-    for(var i=0; i<items.length; i++){
-        if(items[i].type=='checkbox')
-            items[i].checked=true;
-    }
-}	
+
+
