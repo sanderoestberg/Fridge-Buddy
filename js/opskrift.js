@@ -1,5 +1,12 @@
 "use strict";
 
+// sidst i vores html har vi placeret en spinner der indikerer om indholdet på
+// siden er hentet eller stadig er ved at downloade.
+
+// Vi opretter variablen "loader" inde i showLoader og sætter
+// den i forbindelse med elementet/div "#loader" fra vores HTML.
+// showLoader har fået (show) da den skal være til stede fra start.
+// efter vi har fetchet vores data fra WP bliver showLoader sat til false og den vil derfor få tildelt classen hide og forsvinde.
 
 function showLoader(show) {
   let loader = document.querySelector('#loader');
@@ -13,8 +20,10 @@ function showLoader(show) {
 // =========== Recipe SPA functionality =========== //
 
 let recipes = [];
-
-// fetch all movies from WP
+// Her opretter vi et tomt array med navnet "recipes".
+// Så initiere vi functionen "get Recipes" hvor vi fetcher alt data om vores recipies som Json data fra vores opskriftdatabase på wordpress.
+// json og javascript kan frit konverteres frem og tilbage.
+// Når fetch er færdiggjort afslutter vores spinner.
 function getRecipes() {
   fetch('http://oskarwiegaard.dk/wp/wp-json/wp/v2/posts?=_embed')
     .then(function(response) {
@@ -25,6 +34,7 @@ function getRecipes() {
       appendRecipes(json);
       recipes = json;
       setTimeout(function() {
+        //fjerner spinner efter load.
         showLoader(false);
       }, 200);
     });
@@ -32,7 +42,9 @@ function getRecipes() {
 
 getRecipes();
 
-// append movies to the DOM
+// Da vores json er fetchet kan vi nu append det til DOM.
+// vi initiere herefter et for-loop hvor vi kører gennem den samme kodeblok igen og igen inditl alle opskrifterne er gennemgået.
+// noget af dataen er gemt væk under "moreInfo" classen som bliver vist ved at trykke på objectet på siden.
 function appendRecipes(recipes) {
   let htmlTemplate = "";
 
@@ -52,13 +64,15 @@ function appendRecipes(recipes) {
       </article>
     `;
   }
-
+//Opskrifterne bliver hermed appended til innerHTML i vores container "#recipe-container"
 
   document.querySelector('#recipe-container').innerHTML = htmlTemplate;
 
 
 }
-
+//ovenover har vi oprettet en onClick funktion recipeslug. Denne vil vi nu benytte til at vise og kjule data og styling.
+// så når man trykker på en opskrift, folder den sig ud ved at vise mere information og opskriften går fra at fylde 46% til 90% width.
+// Samme ændring bliver fjernet ved at trykke igen.
 function myFunction(recipeslug) {
   console.log(recipeslug);
   // child og moreinfo ændrer størrelsen på et "child" i containeren og viser extra information. Den folder sig ud ved tryk
@@ -74,7 +88,9 @@ function myFunction(recipeslug) {
   }
 
 }
-
+// her opretter vi så en søgefunktion til vores opskrifter.
+// Vi søger efter en value for title eller category fra vores data på wordpress.
+// ved at anvende || fortæller vi at den skal lede efter title eller category. Den skal søge efter begge.
 // search functionality
 function search(value) {
   let searchQuery = value.toLowerCase();
@@ -85,11 +101,11 @@ function search(value) {
     if (title.includes(searchQuery) || category.includes(searchQuery)) {
       filteredRecipes.push(recipe);
     }
-
+// efter de er filtreret efter søgning, bliver de filtreret objecter appended.
   }
   console.log(filteredRecipes);
   appendRecipes(filteredRecipes);
-
+// hvis søgfeltet er tomt (=== 0) bliver alle opskrifter vist igen.
   if (searchQuery.length === 0) {
     appendRecipes(recipes)
   }
