@@ -18,6 +18,7 @@ addButton(show) {
       }
   }
   
+  // Vi har tilføjet en onclick function på ${mad.title} vha. javascript. Når den klikses og den ikke er vist skal den vises. og hvis den er vist skal den ikke vises (if else)  */
   appendDatoButton(madtitle) {
     let menu = document.querySelector(`.${madtitle}`)
     if (menu.style.display === "none") {

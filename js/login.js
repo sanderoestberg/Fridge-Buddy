@@ -149,7 +149,7 @@ function appendMadvarer(madvarer) {
     </div>
     </article>
     <article class="${mad.title} add-dato" style="display:none;" >
-      <p>Udløbsdato</p><input type="date">
+      <p>Udløbsdato</p><input onchange="foodStatus(this.value,'${mad.id}');" type="date">
       ${generateFavFridgeButton(mad.id)}
       </article>
     `;
@@ -179,23 +179,23 @@ function addToFridge(madId) {
 
 
 
-
+  let value = "hej"
   // Array med madID til Firestore Database
   _userRef.doc(_currentUser.uid).set({
-    Fridge: firebase.firestore.FieldValue.arrayUnion(madId)
+    Fridge: firebase.firestore.FieldValue.arrayUnion({madId,value})
   }, {
     merge: true
   });
 
 }
-window.addedToFridge = function(madId) {
-  addedToFridge(madId);
+window.addedToFridge = function (madId, value) {
+  addedToFridge(madId, value);
 }
 
-function addedToFridge(madId) {
+function addedToFridge(madId, value) {
   //showLoader(true);
   _userRef.doc(_currentUser.uid).update({
-    Fridge: firebase.firestore.FieldValue.arrayRemove(madId)
+    Fridge: firebase.firestore.FieldValue.arrayRemove({madId, value})
   });
 }
 
@@ -227,14 +227,15 @@ async function appendFridge(FridgeIds = []) {
   if (FridgeIds.length === 0) {
     htmlTemplate = "<br><br><br><br><p>Tilføj ting til dit køleskab</p> <img src='images/favicon.png'>";
   } else {
-    for (let madId of FridgeIds) {
-      await _madRef.doc(madId).get().then(function(doc) {
+    for (let mad of FridgeIds) {
+      await _madRef.doc(mad.madId).get().then(function (doc) {
         let mad = doc.data();
         mad.id = doc.id;
         htmlTemplate += `
         <article class="madvarer">
-          <div id="${mad.title}" class="madAppended">
+          <div id="${mad.id}" class="madAppended">
             <h4>${mad.title}</h4>
+            ${generateDeleteButton(mad.id)}
             <img src="${mad.img}">
           </div>
         </article>
@@ -248,10 +249,22 @@ async function appendFridge(FridgeIds = []) {
 }
 
 
+function generateDeleteButton(madId) {
+  let btnTemplate = "";
+  if (_currentUser.Fridge && _currentUser.Fridge.includes(madId)) {
+    btnTemplate = `
+      <button onclick="addedToFridge('${madId}')" class="rm">Delete</button>`;
+  }
+  return btnTemplate;
+}
 
+window.foodStatus = function (value, madId) {
+  foodStatus(value, madId);
+}
 
-
-function foodStatus(madId) {
+function foodStatus(value, madId) {
+  console.log(madId)
+  console.log(value)
   // UDLØBSDATO
   var today = new Date();
   today.setMilliseconds(0)
@@ -260,7 +273,7 @@ function foodStatus(madId) {
   today.setMinutes(0)
   var dato = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   console.log(dato)
-  var expireDate = document.querySelector('input[type="date"]').value;
+  var expireDate = value;
   console.log(expireDate)
   var expire = new Date(expireDate)
   expire.setMilliseconds(0)
@@ -274,9 +287,9 @@ function foodStatus(madId) {
   let udløbsdato = res / one_day
   console.log(udløbsdato)
 
-  let madStatus = document.querySelector(`.madAppended`);
+  let madStatus = document.querySelector(`#${madId}`);
 
-  if (udløbsdato <= 0) {
+   if (udløbsdato<=0){
     console.log("Udløbet")
     madStatus.classList.add("udløbet");
   } else if (udløbsdato < 3) {
@@ -285,6 +298,6 @@ function foodStatus(madId) {
   } else {
     console.log("Frisk")
     madStatus.classList.add("frisk");
-  }
+   }
 
-}
+  }
