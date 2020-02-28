@@ -64,6 +64,8 @@ function appendRecipes(recipes) {
       </article>
     `;
   }
+
+
 //Opskrifterne bliver hermed appended til innerHTML i vores container "#recipe-container"
 
   document.querySelector('#recipe-container').innerHTML = htmlTemplate;
@@ -101,6 +103,8 @@ function search(value) {
     if (title.includes(searchQuery) || category.includes(searchQuery)) {
       filteredRecipes.push(recipe);
     }
+
+
 // efter de er filtreret efter søgning, bliver de filtreret objecter appended.
   }
   console.log(filteredRecipes);
@@ -108,5 +112,13 @@ function search(value) {
 // hvis søgfeltet er tomt (=== 0) bliver alle opskrifter vist igen.
   if (searchQuery.length === 0) {
     appendRecipes(recipes)
+  }
+  else if (filteredRecipes.length === 0) {
+    let htmlTemplate = ""
+    htmlTemplate = `
+      <p>Der er desværre ingen opskrifter. Prøv en anden.</p>
+    `;
+    document.querySelector('#recipe-container').innerHTML = htmlTemplate;
+
   }
 }
