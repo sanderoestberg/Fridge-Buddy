@@ -34,6 +34,7 @@ $darkgrey: #818181;
   padding: 0;
   margin: 0;
 
+
 }
 
 body {
@@ -70,7 +71,7 @@ h4 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 9998;
   @extend %shadow;
   max-height: 64px;
   width: 100%;
@@ -375,7 +376,7 @@ color: #3b3b3b;
 
 #shoplist_baggrund div {
   margin-top: 10%;
-  
+
 }
 
 /* Hide the browser's default checkbox */
