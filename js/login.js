@@ -12,7 +12,7 @@ let _madvarer;
 let ExpireDate;
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change
-firebase.auth().onAuthStateChanged(function (user) {
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) { // if user exists and is authenticated
     userAuthenticated(user);
   } else { // if user is not logged in
@@ -62,8 +62,8 @@ function hideTabbar(hide) {
 }
 
 // Gør det muligt for HTML DOM'en at læse funktionen logout()
-window.logout = function () {
-    logout();
+window.logout = function() {
+  logout();
 }
 
 
@@ -71,7 +71,7 @@ window.logout = function () {
 function logout() {
   firebase.auth().signOut();
   // reset input fields
- 
+
   document.querySelector('#name').value = "";
 }
 
@@ -103,12 +103,12 @@ function appendUserData(user) {
 }
 */
 
-// initialize movie references - all movies and user's favourite movies
+// initialize food references - all food and user's favourite food
 function init() {
-  // init user data and favourite movies
+  // init user data and favourite food
   _userRef.doc(_currentUser.uid).onSnapshot({
     includeMetadataChanges: true
-  }, function (userData) {
+  }, function(userData) {
     if (!userData.metadata.hasPendingWrites && userData.data()) {
       _currentUser = {
         ...firebase.auth().currentUser,
@@ -123,10 +123,10 @@ function init() {
     }
   });
 
-  // init all movies
-  _madRef.onSnapshot(function (snapshotData) {
+  // init alt mad
+  _madRef.onSnapshot(function(snapshotData) {
     _madvarer = [];
-    snapshotData.forEach(function (doc) {
+    snapshotData.forEach(function(doc) {
       let mad = doc.data();
       mad.id = doc.id;
       _madvarer.push(mad);
@@ -136,7 +136,7 @@ function init() {
 }
 
 
-// Mad forslag under add-menu'en appended, ved hjælp af et for-loop kan vi iterere over al mad i vores databse "madvarer" og herefter ved hjælp af backtick eller template string `` få dem vist. 
+// Mad forslag under add-menu'en appended, ved hjælp af et for-loop kan vi iterere over al mad i vores databse "madvarer" og herefter ved hjælp af backtick eller template string `` få dem vist.
 function appendMadvarer(madvarer) {
   let htmlTemplate = "";
   for (let mad of madvarer) {
@@ -173,7 +173,7 @@ function generateFavFridgeButton(madId) {
   return btnTemplate;
 }
 
-window.addToFridge = function (madId) {
+window.addToFridge = function(madId) {
   addToFridge(madId);
 }
 
@@ -203,8 +203,8 @@ function addedToFridge(madId, ExpireDate) {
   });
 }
 
-// onclick funktion på save-knappen under profil siden. 
-window.updateUser = function () {
+// onclick funktion på save-knappen under profil siden.
+window.updateUser = function() {
   updateUser();
 }
 
@@ -216,7 +216,7 @@ function updateUser() {
     displayName: document.querySelector('#name').value
   });
 
-  // Fot at opdatere og tilføje brugerens navn og email i Databasen "users" 
+  // Fot at opdatere og tilføje brugerens navn og email i Databasen "users"
   _userRef.doc(_currentUser.uid).set({
     displayName: document.querySelector('#name').value,
     email: document.querySelector('#mail').value
@@ -245,7 +245,7 @@ async function appendFridge(FridgeIds = []) {
         </article>
       `;
       });
-      
+
     }
   }
   document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
@@ -272,7 +272,7 @@ function foodStatus(value, madId) {
   today.setSeconds(0)
   today.setHours(0)
   today.setMinutes(0)
-  var dato = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var dato = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   console.log(dato)
   var expireDate = value;
   console.log(expireDate)
@@ -281,15 +281,15 @@ function foodStatus(value, madId) {
   expire.setSeconds(0)
   expire.setHours(0)
   expire.setMinutes(0)
-  
+
   var res = expire.getTime() - today.getTime();
-  // One day Time in ms (milliseconds) 
+  // One day Time in ms (milliseconds)
   var one_day = 1000 * 60 * 60 * 24;
-  let udløbsdato = res/one_day
+  let udløbsdato = res / one_day
   console.log(udløbsdato)
 
-  let madStatus = document.querySelector(`#${madId}`);
-  
+  //let madStatus = document.querySelector(`#${madId}`);
+
    if (udløbsdato<=0){
     console.log("Udløbet")
     return "udløbet";

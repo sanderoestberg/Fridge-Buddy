@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--Language set to English. Change to da for Danish if needed-->
+<html lang="da">
 
 <head>
   <meta charset="UTF-8">
@@ -9,9 +8,10 @@
   <meta name="description" content="Fridge Buddy is a Web App which will help you manage your groceries as well as your shopping list">
   <meta name="author" content="Johanne, Sander og Oskar">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-  <link rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/tko2nny.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onhashchange="pageChange()">
@@ -36,7 +36,7 @@
     <a href="#recipe"> <img src="images\hat-icon.svg"> </a>
     <a href="#fridge"> <img src="images\fridge-icon.svg"> </a>
     <a href="#shoplist"> <img src="images\shoplist-icon.svg"> </a>
-    
+
   </nav>
 
   <section id="fridge" class="page">
@@ -69,7 +69,6 @@
 <article id="madvarer-container">
     <!-- Køleskabs Indhold-->
     </article>
-    
 
     </article>
 <!--- Tilføje knap til madvarer-->
@@ -148,6 +147,7 @@
     </div>
     </div>
     <form>
+      <img id="profil-ikon" src="images/profile-icon.svg" alt="profile">
       <label for="name">Name</label>
       <input type="text" id="name" placeholder="Type your name" required>
       <label for="mail">Mail</label>
@@ -156,7 +156,7 @@
     </form>
   </section>
 
-  
+
 
   <!-- loader  -->
 <div id="loader">
