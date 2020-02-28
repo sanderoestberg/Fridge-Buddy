@@ -1,6 +1,9 @@
+
+export default class addBtn {
+
 // Åbner og lukker add-menuen ud fra vores add knap.
 
-function addButton(show) {
+addButton(show) {
     let btn = document.querySelector('#add-button p');
     let menu = document.querySelector('.add-button-menu')
     if (menu.style.display === "none") {
@@ -15,7 +18,7 @@ function addButton(show) {
       }
   }
   
-  function appendDatoButton(madtitle) {
+  appendDatoButton(madtitle) {
     let menu = document.querySelector(`.${madtitle}`)
     if (menu.style.display === "none") {
         menu.style.display = "flex";
@@ -27,4 +30,4 @@ function addButton(show) {
   }
 
   
-
+}

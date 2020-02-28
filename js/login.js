@@ -169,27 +169,53 @@ function generateFavFridgeButton(madId) {
   return btnTemplate;
 }
 
-window.addToFridge = function () {
-  addToFridge();
+window.addToFridge = function (madId) {
+  addToFridge(madId);
 }
 
 
 function addToFridge(madId) {
   //showLoader(true);
-  console.log(_currentUser.uid)
+
+
+  // UDLØBSDATO
+  var today = new Date();
+  today.setMilliseconds(0)
+  today.setSeconds(0)
+  today.setHours(0)
+  today.setMinutes(0)
+  var dato = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  console.log(dato)
+  var expireDate = document.querySelector('input[type="date"]').value;
+  console.log(expireDate)
+  var expire = new Date(expireDate)
+  expire.setMilliseconds(0)
+  expire.setSeconds(0)
+  expire.setHours(0)
+  expire.setMinutes(0)
+  
+  var res = expire.getTime() - today.getTime();
+  // One day Time in ms (milliseconds) 
+  var one_day = 1000 * 60 * 60 * 24;
+  let udløbsdato = res/one_day
+  console.log(udløbsdato)
+  
+  // Array med madID til Firestore Database
   _userRef.doc(_currentUser.uid).set({
-    Fridge: firebase.firestore.FieldValue.arrayUnion(madId)
+    Fridge: firebase.firestore.FieldValue.arrayUnion(madId),
+    Udløbsdatoer: firebase.firestore.FieldValue.arrayUnion(udløbsdato)
   }, {
     merge: true
   });
+
 }
-window.addedToFridge = function () {
-  addedToFridge();
+window.addedToFridge = function (madId) {
+  addedToFridge(madId);
 }
 
 function addedToFridge(madId) {
   //showLoader(true);
-  _userRef.doc(_currentUser.uid).set({
+  _userRef.doc(_currentUser.uid).update({
     Fridge: firebase.firestore.FieldValue.arrayRemove(madId)
   });
 }
@@ -220,20 +246,49 @@ function updateUser() {
 async function appendFridge(FridgeIds = []) {
   let htmlTemplate = "";
   if (FridgeIds.length === 0) {
-    htmlTemplate = "<p>Please, add movies to favourites.</p>";
+    htmlTemplate = "<br><br><br><br><p>Tilføj ting til dit køleskab</p> <img src='images/favicon.png'>";
   } else {
     for (let madId of FridgeIds) {
       await _madRef.doc(madId).get().then(function (doc) {
         let mad = doc.data();
         mad.id = doc.id;
         htmlTemplate += `
-        <article>
-          <h4>${mad.title}</h4>
-          <img src="${mad.img}">
+        <article class="madvarer">
+          <div id="${mad.title}" class="madAppended">
+            <h4>${mad.title}</h4>
+            <img src="${mad.img}">
+          </div>
         </article>
       `;
       });
+      document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
+      foodStatus(madId);
     }
   }
-  document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
+  
 }
+
+
+
+
+
+
+function foodStatus(madId) {
+  
+
+  let madStatus = document.querySelector(`.madAppended`);
+  
+   if (udløbsdato<=0){
+    console.log("Udløbet")
+    madStatus.classList.add("udløbet");
+   }
+   else if (udløbsdato<3) {
+    console.log("Udløber snart")
+    madStatus.classList.add("udløber");
+   }
+   else {
+    console.log("Frisk")
+    madStatus.classList.add("frisk");
+   }
+   
+  }
