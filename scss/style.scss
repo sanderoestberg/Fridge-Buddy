@@ -751,3 +751,9 @@ select {
 .firebaseui-link {
   color: $darkgrey;
 }
+
+.mdl-button--primary.mdl-button--primary{
+  color: $darkgrey;
+  border: 1px solid $darkgrey;
+  border-radius: 7px;
+}
