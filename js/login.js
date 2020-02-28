@@ -178,32 +178,11 @@ function addToFridge(madId) {
   //showLoader(true);
 
 
-  // UDLØBSDATO
-  var today = new Date();
-  today.setMilliseconds(0)
-  today.setSeconds(0)
-  today.setHours(0)
-  today.setMinutes(0)
-  var dato = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  console.log(dato)
-  var expireDate = document.querySelector('input[type="date"]').value;
-  console.log(expireDate)
-  var expire = new Date(expireDate)
-  expire.setMilliseconds(0)
-  expire.setSeconds(0)
-  expire.setHours(0)
-  expire.setMinutes(0)
   
-  var res = expire.getTime() - today.getTime();
-  // One day Time in ms (milliseconds) 
-  var one_day = 1000 * 60 * 60 * 24;
-  let udløbsdato = res/one_day
-  console.log(udløbsdato)
   
   // Array med madID til Firestore Database
   _userRef.doc(_currentUser.uid).set({
-    Fridge: firebase.firestore.FieldValue.arrayUnion(madId),
-    Udløbsdatoer: firebase.firestore.FieldValue.arrayUnion(udløbsdato)
+    Fridge: firebase.firestore.FieldValue.arrayUnion(madId)
   }, {
     merge: true
   });
@@ -261,20 +240,39 @@ async function appendFridge(FridgeIds = []) {
         </article>
       `;
       });
-      document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
-      foodStatus(madId);
+      
     }
   }
-  
+  document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
+  //foodStatus(madId);
 }
 
 
 
 
 
-
 function foodStatus(madId) {
+  // UDLØBSDATO
+  var today = new Date();
+  today.setMilliseconds(0)
+  today.setSeconds(0)
+  today.setHours(0)
+  today.setMinutes(0)
+  var dato = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  console.log(dato)
+  var expireDate = document.querySelector('input[type="date"]').value;
+  console.log(expireDate)
+  var expire = new Date(expireDate)
+  expire.setMilliseconds(0)
+  expire.setSeconds(0)
+  expire.setHours(0)
+  expire.setMinutes(0)
   
+  var res = expire.getTime() - today.getTime();
+  // One day Time in ms (milliseconds) 
+  var one_day = 1000 * 60 * 60 * 24;
+  let udløbsdato = res/one_day
+  console.log(udløbsdato)
 
   let madStatus = document.querySelector(`.madAppended`);
   
@@ -290,5 +288,5 @@ function foodStatus(madId) {
     console.log("Frisk")
     madStatus.classList.add("frisk");
    }
-   
+
   }
