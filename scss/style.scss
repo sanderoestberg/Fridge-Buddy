@@ -60,7 +60,7 @@ h1 {
 h4 {
   font-weight: 350;
 }
-
+//lul
 /* styling af topbar */
 .topbar {
   background-color: $topbar;
@@ -540,11 +540,11 @@ textarea {
 
 .madAppended {
   display: flex;
-  width: 90%;
-  height: 10vh;
+  width: 95%;
+  height: 7vh;
   border-style: solid;
-  border-color: grey;
-  border-radius: 25px;
+  border-color: $darkgrey;
+  border-radius: 15px;
   margin-top: 2%;
   justify-content: space-between;
   padding: 0 5%;
@@ -766,4 +766,9 @@ select {
   color: $darkgrey;
   border: 1px solid $darkgrey;
   border-radius: 7px;
+}
+
+.rm{
+  color: $darkgrey;
+
 }
