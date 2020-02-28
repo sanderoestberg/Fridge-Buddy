@@ -191,8 +191,9 @@ function addToFridge(madId) {
 
 
 window.addedToFridge = function (madId, ExpireDate) {
-  addedToFridge(madId, ExpireDate);
   console.log(madId, ExpireDate)
+  addedToFridge(madId, ExpireDate);
+  
 }
 
 function addedToFridge(madId, ExpireDate) {
