@@ -233,7 +233,7 @@ async function appendFridge(FridgeIds = []) {
         mad.id = doc.id;
         htmlTemplate += `
         <article class="madvarer">
-          <div id="${mad.title}" class="madAppended">
+        <div id="${mad.title}" class="madAppended">
             <h4>${mad.title}</h4>
             <img src="${mad.img}">
           </div>

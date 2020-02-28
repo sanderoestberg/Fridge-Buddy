@@ -291,53 +291,52 @@ color: #3b3b3b;
 }
 
 /* ---------- profile ---------- */
-.profil-oplysninger {
+#profile form {
   display: flex;
-  margin-top: 10%;
+  margin-top: 18%;
   width: 98%;
   height: 60vh;
   border-style: solid;
   border-color: grey;
   border-radius: 25px;
-  text-align: left;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.profil-oplysninger img {
-  width: 12%;
-  align-content: center;
-}
-
-.line {
-  width: 66%;
-  border-bottom: 1px solid black;
-}
-
-.profil-oplysninger h5 {
+#profile label {
   text-transform: uppercase;
   margin: 1% 0;
   font-size: 1.1em;
 }
 
-.profil-oplysninger h3 {
-  font-size: 1.2em;
+#profile input{
+  font-size: 1.2em; color: $darkgrey; text-align: center; border: solid; border-radius: 15px;
 }
 
-.profil-oplysninger p {
-  font-size: 1.2em;
+#profile button {
+  border-style: solid;
+  border-color: $darkgrey;
+  border-radius: 7px;
+  padding: 2% 15%;
+  background-color: $lightgrey;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 5%;
+  font-size: 0.8em;
+  background-color: $darkgrey;
+  color: white;
+
 }
 
-.profil-oplysninger article {
-  margin: 7% 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+#profil-ikon {
+  width: 15%;
 }
 
-#profil_center {
-  margin: 0;
-}
+
 
 /* ---------- SHOPLIST---------- */
 
@@ -707,3 +706,5 @@ select {
     transform: rotate(360deg);
   }
 }
+
+/* ---------- signin ---------- */
