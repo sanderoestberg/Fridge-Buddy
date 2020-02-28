@@ -259,7 +259,7 @@ function generateDeleteButton(mad) {
   let btnTemplate = "";
   if (_currentUser.Fridge && _currentUser.Fridge.includes(mad)) {
     btnTemplate = `
-    <img src="images/skraldespandlys.svg" onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" alt="slet-knap">`;
+    <img src="images/skraldespand.svg" onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" alt="slet-knap">`;
   }
   return btnTemplate;
 }
