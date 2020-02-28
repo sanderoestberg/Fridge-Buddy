@@ -9,7 +9,7 @@ const _userRef = _db.collection("users")
 let _currentUser;
 const _madRef = _db.collection("madvarer");
 let _madvarer;
-
+let ExpireDate;
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change
 firebase.auth().onAuthStateChanged(function (user) {
@@ -149,12 +149,16 @@ function appendMadvarer(madvarer) {
     </div>
     </article>
     <article class="${mad.title} add-dato" style="display:none;" >
-      <p>Udløbsdato</p><input onchange="foodStatus(this.value,'${mad.id}');" type="date">
+      <p>Udløbsdato</p><input onchange="setExpireDate(this.value);" type="date">
       ${generateFavFridgeButton(mad.id)}
       </article>
     `;
   }
   document.querySelector('#add-menu-forslag').innerHTML = htmlTemplate;
+}
+
+window.setExpireDate = function (dato){
+ ExpireDate = dato
 }
 
 // Tilføj-knappen under add-menuen bliver lavet her og srkevet ind i 'appendMadvarer' backtick-string. onclick der kører funktionen "addToFridge" og hvis Fridge eller undeholder det mad ID skal den ændre style og sige "tilføjet"
@@ -177,25 +181,25 @@ window.addToFridge = function (madId) {
 function addToFridge(madId) {
   //showLoader(true);
 
-
-  
-  let value = "hej"
   // Array med madID til Firestore Database
   _userRef.doc(_currentUser.uid).set({
-    Fridge: firebase.firestore.FieldValue.arrayUnion({madId,value})
+    Fridge: firebase.firestore.FieldValue.arrayUnion({madId,ExpireDate})
   }, {
     merge: true
   });
-
-}
-window.addedToFridge = function (madId, value) {
-  addedToFridge(madId, value);
 }
 
-function addedToFridge(madId, value) {
+
+window.addedToFridge = function (madId, ExpireDate) {
+  addedToFridge(madId, ExpireDate);
+  console.log(madId, ExpireDate)
+}
+
+function addedToFridge(madId, ExpireDate) {
   //showLoader(true);
+  console.log(madId, ExpireDate)
   _userRef.doc(_currentUser.uid).update({
-    Fridge: firebase.firestore.FieldValue.arrayRemove({madId, value})
+    Fridge: firebase.firestore.FieldValue.arrayRemove({madId, ExpireDate})
   });
 }
 
@@ -229,14 +233,14 @@ async function appendFridge(FridgeIds = []) {
   } else {
     for (let mad of FridgeIds) {
       await _madRef.doc(mad.madId).get().then(function (doc) {
-        let mad = doc.data();
-        mad.id = doc.id;
+        let madData = doc.data();
+        madData.id = doc.id;
         htmlTemplate += `
         <article class="madvarer">
-          <div id="${mad.id}" class="madAppended">
-            <h4>${mad.title}</h4>
-            ${generateDeleteButton(mad.id)}
-            <img src="${mad.img}">
+          <div id="${madData.id}" class="madAppended ${foodStatus(mad.ExpireDate)}">
+            <h4>${madData.title}</h4>
+            ${generateDeleteButton(mad)}
+            <img src="${madData.img}">
           </div>
         </article>
       `;
@@ -249,18 +253,15 @@ async function appendFridge(FridgeIds = []) {
 }
 
 
-function generateDeleteButton(madId) {
+function generateDeleteButton(mad) {
   let btnTemplate = "";
-  if (_currentUser.Fridge && _currentUser.Fridge.includes(madId)) {
+  if (_currentUser.Fridge && _currentUser.Fridge.includes(mad)) {
     btnTemplate = `
-      <button onclick="addedToFridge('${madId}')" class="rm">Delete</button>`;
+      <button onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" class="rm">Delete</button>`;
   }
   return btnTemplate;
 }
 
-window.foodStatus = function (value, madId) {
-  foodStatus(value, madId);
-}
 
 function foodStatus(value, madId) {
   console.log(madId)
@@ -291,15 +292,15 @@ function foodStatus(value, madId) {
   
    if (udløbsdato<=0){
     console.log("Udløbet")
-    madStatus.classList.add("udløbet");
+    return "udløbet";
    }
    else if (udløbsdato<3) {
     console.log("Udløber snart")
-    madStatus.classList.add("udløber");
+    return "udløber";
    }
    else {
     console.log("Frisk")
-    madStatus.classList.add("frisk");
+    return "frisk";
    }
 
   }
