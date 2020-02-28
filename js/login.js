@@ -237,12 +237,14 @@ async function appendFridge(FridgeIds = []) {
         madData.id = doc.id;
         htmlTemplate += `
         <article class="madvarer">
-          <div id="${madData.id}" class="madAppended ${foodStatus(mad.ExpireDate)}">
+          <div id="${madData.id}" class="madAppended ${foodStatus(mad.ExpireDate)}" onclick="appendDeleteBtn('${madData.title}')">
             <h4>${madData.title}</h4>
-            ${generateDeleteButton(mad)}
             <img src="${madData.img}">
           </div>
         </article>
+        <article class="${madData.title} add-dato deletebtn" style="display:none;">
+        ${generateDeleteButton(mad)}
+      </article>
       `;
       });
 
@@ -257,7 +259,7 @@ function generateDeleteButton(mad) {
   let btnTemplate = "";
   if (_currentUser.Fridge && _currentUser.Fridge.includes(mad)) {
     btnTemplate = `
-      <button onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" class="rm">Delete</button>`;
+    <img src="images/skraldespandlys.svg" onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" alt="slet-knap">`;
   }
   return btnTemplate;
 }

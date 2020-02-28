@@ -221,6 +221,16 @@ h4 {
  */
 }
 
+.deletebtn{
+    display: flex;
+    justify-content: center;
+    
+    img{
+        width: 9%;
+        margin-top: 7px;
+    }
+}
+
 .add-dato {
   display: none;
   align-items: center;
