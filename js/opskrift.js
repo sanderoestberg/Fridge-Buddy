@@ -6,7 +6,7 @@
 // Vi opretter variablen "loader" inde i showLoader og sætter
 // den i forbindelse med elementet/div "#loader" fra vores HTML.
 // showLoader har fået (show) da den skal være til stede fra start.
-// efter vi har fetchet vores data fra WP bliver showLoader sat til false og den vil derfor få tildelt classen hide og forsvinde.
+// efter vi har fetchet vores data fra WP bliver showLoader sat til false og den vil derfor få tildelt classen hide og forsvinder.
 
 function showLoader(show) {
   let loader = document.querySelector('#loader');
@@ -17,7 +17,7 @@ function showLoader(show) {
   }
 }
 
-// =========== Recipe SPA functionality =========== //
+
 
 let recipes = [];
 // Her opretter vi et tomt array med navnet "recipes".
