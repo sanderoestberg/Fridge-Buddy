@@ -72,7 +72,7 @@ function appendRecipes(recipes) {
 
 
 }
-//ovenover har vi oprettet en onClick funktion recipeslug. Denne vil vi nu benytte til at vise og kjule data og styling.
+//ovenover har vi oprettet en onClick funktion recipeslug. Denne vil vi nu benytte til at vise og skjule data og styling.
 // så når man trykker på en opskrift, folder den sig ud ved at vise mere information og opskriften går fra at fylde 46% til 90% width.
 // Samme ændring bliver fjernet ved at trykke igen.
 function myFunction(recipeslug) {

@@ -81,29 +81,8 @@ function appendUserData() {
   document.querySelector('#mail').value = _currentUser.email;
 }
 
-/*
-function appendUserData(user) {
-  document.querySelector('#profile').innerHTML += `
-  <h2 class="page_overskrift"> Profil oplysninger </h2>
-  <section class="profil-oplysninger">
-  <article id="profil_center">
-  <img src="images/profile-icon.svg">
-  </article>
-  <article>
-    <h5>navn</h5>
-    <h3>${user.displayName}</h3>
-    <div class="line"></div>
-    </article>
-    <article>
-    <h5>email</h5>
-    <p>${user.email}</p>
-    <div class="line"></div>
-    </article>
-  </section>`;
-}
-*/
 
-// initialize food references - all food and user's favourite food
+// initialize food references
 function init() {
   // init user data and favourite food
   _userRef.doc(_currentUser.uid).onSnapshot({
@@ -115,7 +94,8 @@ function init() {
         ...userData.data()
       }; //concating two objects: authUser object and userData objec from the db
       appendUserData();
-      appendFridge(_currentUser.Fridge);
+      //appendFridge(_currentUser.Fridge);
+      initFridge();
       if (_madvarer) {
         appendMadvarer(_madvarer); // refresh movies when user data changes
       }
@@ -123,7 +103,7 @@ function init() {
     }
   });
 
-  // init alt mad
+  // init mad fra databasen til mad forslag.
   _madRef.onSnapshot(function(snapshotData) {
     _madvarer = [];
     snapshotData.forEach(function(doc) {
@@ -177,7 +157,23 @@ window.addToFridge = function(madId) {
   addToFridge(madId);
 }
 
+function addToFridge(madId) {
+  //showLoader(true);
+  _userRef.doc(_currentUser.uid).collection('fridge').add({
+    madId,
+    ExpireDate
+  });
+}
 
+window.removeFromFridge = function (id) {
+  removeFromFridge(id);
+}
+
+function removeFromFridge(id) {
+  _userRef.doc(_currentUser.uid).collection('fridge').doc(id).delete();
+}
+
+/*
 function addToFridge(madId) {
   //showLoader(true);
 
@@ -203,6 +199,7 @@ function addedToFridge(madId, ExpireDate) {
     Fridge: firebase.firestore.FieldValue.arrayRemove({madId, ExpireDate})
   });
 }
+*/
 
 // onclick funktion på save-knappen under profil siden.
 window.updateUser = function() {
@@ -227,6 +224,7 @@ function updateUser() {
   });
 }
 
+/*
 async function appendFridge(FridgeIds = []) {
   let htmlTemplate = "";
   if (FridgeIds.length === 0) {
@@ -256,6 +254,7 @@ async function appendFridge(FridgeIds = []) {
 }
 
 
+
 function generateDeleteButton(mad) {
   let btnTemplate = "";
   if (_currentUser.Fridge && _currentUser.Fridge.includes(mad)) {
@@ -263,6 +262,38 @@ function generateDeleteButton(mad) {
     <img src="images/skraldespand.svg" onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" alt="slet-knap">`;
   }
   return btnTemplate;
+}
+
+*/
+
+
+function initFridge() {
+  _userRef.doc(_currentUser.uid).collection('fridge').onSnapshot(function (fridgeData) {
+    let htmlTemplate = "";
+    if (fridgeData.docs.length === 0) {
+      document.querySelector('#madvarer-container').innerHTML = "<br><br><br><br><p>Tilføj ting til dit køleskab</p> <img src='images/favicon.png'>";
+    }
+    fridgeData.forEach(async function (doc) {
+      let fridgeDoc = doc.data();
+      fridgeDoc.id = doc.id
+      await _madRef.doc(fridgeDoc.madId).get().then(function (doc) {
+        let madData = doc.data();
+        madData.id = doc.id;
+        htmlTemplate += `
+          <article class="madvarer">
+            <div id="${madData.id}" class="madAppended ${foodStatus(fridgeDoc.ExpireDate)}" onclick="appendDeleteBtn('${madData.title}')">
+              <h4>${madData.title}</h4>
+              <img src="${madData.img}">
+            </div>
+          </article>
+          <article class="${madData.title} add-dato deletebtn" style="display:none;">
+          <img src="images/skraldespand.svg" onclick="removeFromFridge('${fridgeDoc.id}')" alt="slet-knap">
+        </article>
+        `;
+      });
+      document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
+    });
+  });
 }
 
 
