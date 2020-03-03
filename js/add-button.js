@@ -1,5 +1,5 @@
 
-export default class addBtn {
+export default class AddBtn {
 
 // Åbner og lukker add-menuen ud fra vores add knap.
 
