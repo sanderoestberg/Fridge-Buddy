@@ -24,5 +24,8 @@ window.addButton = function () {
 window.appendDatoButton = function (madtitle) {
     _addButton.appendDatoButton(madtitle);
 }
+window.appendDeleteBtn = function (madtitle) {
+    _addButton.appendDeleteBtn(madtitle);
+}
 
 

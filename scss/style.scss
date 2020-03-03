@@ -60,7 +60,7 @@ h1 {
 h4 {
   font-weight: 350;
 }
-
+//lul
 /* styling af topbar */
 .topbar {
   background-color: $topbar;
@@ -74,10 +74,10 @@ h4 {
   @extend %shadow;
   max-height: 64px;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
 
-  .topbar-flex{
+  .topbar-flex {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -86,25 +86,26 @@ h4 {
     width: 90%;
   }
 
-  a img{
-      width: 30px;
-      height: auto;
+  a img {
+    width: 30px;
+    height: auto;
 
   }
 }
 
-.left{
-    padding-right: 31px;
+.left {
+  padding-right: 31px;
 }
 
-.right{
-text-decoration: none;
-font-weight: bold;
-color: #3b3b3b;
+.right {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3b3b3b;
 }
-#logo{
-    max-height: 50px;
-    transform-origin: center;
+
+#logo {
+  max-height: 50px;
+  transform-origin: center;
 
 }
 
@@ -119,6 +120,7 @@ color: #3b3b3b;
   right: 0;
   z-index: 9999;
   @extend %shadowbot;
+
   img {
     height: 40px;
     width: auto;
@@ -219,14 +221,24 @@ color: #3b3b3b;
  */
 }
 
-.add-dato{
-    display: none;
-    align-items: center;
+.deletebtn{
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 9%;
+        margin-top: 7px;
+    }
+}
+
+.add-dato {
+  display: none;
+  align-items: center;
 
 }
 
 
-.add-menu-animation{
+.add-menu-animation {
   animation-name: open-menu;
   animation-duration: 0.3s;
   transform-origin: bottom right;
@@ -235,17 +247,22 @@ color: #3b3b3b;
 }
 
 @keyframes open-menu {
-  from {opacity: 0;
-    transform: scale(0);}
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
 
-  to {opacity: 1;
-    transform: scale(1);}
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
 .highlight {
   background-color: $lightgrey;
-  p{
+
+  p {
     color: $darkgrey;
   }
 }
@@ -291,53 +308,56 @@ color: #3b3b3b;
 }
 
 /* ---------- profile ---------- */
-.profil-oplysninger {
+#profile form {
   display: flex;
-  margin-top: 10%;
+  margin-top: 18%;
   width: 98%;
   height: 60vh;
   border-style: solid;
   border-color: grey;
   border-radius: 25px;
-  text-align: left;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.profil-oplysninger img {
-  width: 12%;
-  align-content: center;
-}
-
-.line {
-  width: 66%;
-  border-bottom: 1px solid black;
-}
-
-.profil-oplysninger h5 {
+#profile label {
   text-transform: uppercase;
   margin: 1% 0;
   font-size: 1.1em;
 }
 
-.profil-oplysninger h3 {
+#profile input {
   font-size: 1.2em;
+  color: $darkgrey;
+  text-align: center;
+  border: solid;
+  border-radius: 15px;
 }
 
-.profil-oplysninger p {
-  font-size: 1.2em;
+#profile button {
+  border-style: solid;
+  border-color: $darkgrey;
+  border-radius: 7px;
+  padding: 2% 15%;
+  background-color: $lightgrey;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 5%;
+  font-size: 0.8em;
+  background-color: $darkgrey;
+  color: white;
+
 }
 
-.profil-oplysninger article {
-  margin: 7% 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+#profil-ikon {
+  width: 15%;
 }
 
-#profil_center {
-  margin: 0;
-}
+
 
 /* ---------- SHOPLIST---------- */
 
@@ -350,16 +370,17 @@ color: #3b3b3b;
 }
 
 #width-shoplist {
-  max-width: 60vh; margin: 0 auto;
+  max-width: 60vh;
+  margin: 0 auto;
 }
 
 /* The container */
-.container{
+.container {
   top: 15%;
-  height: 10vh;
+  height: 7vh;
   border-style: solid;
   border-color: grey;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 0 5%;
   position: relative;
   margin: 0 5%;
@@ -369,13 +390,15 @@ color: #3b3b3b;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: flex; align-items: center;
-  text-transform: uppercase; font-size: 1em;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1em;
 }
 
 #shoplist_baggrund div {
   margin-top: 10%;
-  
+
 }
 
 /* Hide the browser's default checkbox */
@@ -391,7 +414,7 @@ color: #3b3b3b;
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top:30%;
+  top: 30%;
   left: 80%;
   height: 25px;
   width: 25px;
@@ -402,12 +425,12 @@ color: #3b3b3b;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: $darkgrey;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: $darkgrey;
 }
 
@@ -419,7 +442,7 @@ color: #3b3b3b;
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 
@@ -454,7 +477,8 @@ color: #3b3b3b;
   color: white;
 }
 
-#input_markerAlle, textarea {
+#input_markerAlle,
+textarea {
   background-color: $darkgrey;
   color: white;
   font-family: rooney-sans, sans-serif;
@@ -477,12 +501,15 @@ color: #3b3b3b;
 }
 
 .skraldespand {
-width: 100%; height: 5vh;
-  }
+  width: 100%;
+  height: 5vh;
+}
 
-  .skraldespand img {
-   height: 4vh; float: right; margin-right: 7%;
-  }
+.skraldespand img {
+  height: 4vh;
+  float: right;
+  margin-right: 7%;
+}
 
 /* ---------- Indhold køleskab---------- */
 
@@ -513,11 +540,11 @@ width: 100%; height: 5vh;
 
 .madAppended {
   display: flex;
-  width: 90%;
-  height: 10vh;
+  width: 95%;
+  height: 7vh;
   border-style: solid;
-  border-color: grey;
-  border-radius: 25px;
+  border-color: $darkgrey;
+  border-radius: 15px;
   margin-top: 2%;
   justify-content: space-between;
   padding: 0 5%;
@@ -531,19 +558,14 @@ width: 100%; height: 5vh;
 .mad {
   display: flex;
   width: 90%;
-  height: 10vh;
   border-style: solid;
   border-color: grey;
-  border-radius: 25px;
+  border-radius: 19px;
   margin-top: 2%;
   justify-content: space-between;
   padding: 0 5%;
   align-items: center;
 
-}
-
-.mad h4 {
-  font-size: 1.3em;
 }
 
 .madvarer {
@@ -554,7 +576,7 @@ width: 100%; height: 5vh;
 
 .madvarer img {
   width: 9%;
-  height: 9vh;
+  height: 6vh;
 }
 
 .cirkler {
@@ -603,15 +625,16 @@ width: 100%; height: 5vh;
   margin-top: 6%;
   font-family: abolition, sans-serif;
   font-style: normal;
-font-weight: 400;
-  font-size: 2.5em; color: #5D5A5A;
+  font-weight: 400;
+  font-size: 2.5em;
+  color: #5D5A5A;
   letter-spacing: 2px;
 }
 
 /* RECIPEEEEEEEEEEEEEEEES */
-#recipe{
-  h2{
-    margin-top: 15px;
+#recipe {
+  h2 {
+    margin: 15px 0%;
   }
 }
 
@@ -646,7 +669,7 @@ font-weight: 400;
   border-radius: 7px;
   color: $darkgrey;
   width: 90%;
-  margin: 15px auto;
+  margin: 0 auto;
 }
 
 input,
@@ -706,4 +729,41 @@ select {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* ---------- signin ---------- */
+
+.mdl-button--raised.mdl-button--colored {
+  background-color: grey;
+  color: #fff;
+  font-family: rooney-sans, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  border-radius: 10px;
+}
+
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: abolition, sans-serif;
+  font-style: normal;
+  font-size: 2.5em;
+  color: $darkgrey;
+}
+
+.firebaseui-link {
+  color: $darkgrey;
+}
+
+.mdl-button--primary.mdl-button--primary{
+  color: $darkgrey;
+  border: 1px solid $darkgrey;
+  border-radius: 7px;
+}
+
+.rm{
+  color: $darkgrey;
+
 }

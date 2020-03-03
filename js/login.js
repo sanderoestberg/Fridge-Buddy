@@ -9,10 +9,10 @@ const _userRef = _db.collection("users")
 let _currentUser;
 const _madRef = _db.collection("madvarer");
 let _madvarer;
-
+let ExpireDate;
 // ========== FIREBASE AUTH ========== //
 // Listen on authentication state change
-firebase.auth().onAuthStateChanged(function (user) {
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) { // if user exists and is authenticated
     userAuthenticated(user);
   } else { // if user is not logged in
@@ -62,8 +62,8 @@ function hideTabbar(hide) {
 }
 
 // Gør det muligt for HTML DOM'en at læse funktionen logout()
-window.logout = function () {
-    logout();
+window.logout = function() {
+  logout();
 }
 
 
@@ -71,7 +71,7 @@ window.logout = function () {
 function logout() {
   firebase.auth().signOut();
   // reset input fields
- 
+
   document.querySelector('#name').value = "";
 }
 
@@ -82,12 +82,12 @@ function appendUserData() {
 }
 
 
-// initialize movie references - all movies and user's favourite movies
+// initialize food references - all food and user's favourite food
 function init() {
-  // init user data and favourite movies
+  // init user data and favourite food
   _userRef.doc(_currentUser.uid).onSnapshot({
     includeMetadataChanges: true
-  }, function (userData) {
+  }, function(userData) {
     if (!userData.metadata.hasPendingWrites && userData.data()) {
       _currentUser = {
         ...firebase.auth().currentUser,
@@ -102,10 +102,10 @@ function init() {
     }
   });
 
-  // init all movies
-  _madRef.onSnapshot(function (snapshotData) {
+  // init alt mad
+  _madRef.onSnapshot(function(snapshotData) {
     _madvarer = [];
-    snapshotData.forEach(function (doc) {
+    snapshotData.forEach(function(doc) {
       let mad = doc.data();
       mad.id = doc.id;
       _madvarer.push(mad);
@@ -115,7 +115,7 @@ function init() {
 }
 
 
-// Mad forslag under add-menu'en appended, ved hjælp af et for-loop kan vi iterere over al mad i vores databse "madvarer" og herefter ved hjælp af backtick eller template string `` få dem vist. 
+// Mad forslag under add-menu'en appended, ved hjælp af et for-loop kan vi iterere over al mad i vores databse "madvarer" og herefter ved hjælp af backtick eller template string `` få dem vist.
 function appendMadvarer(madvarer) {
   let htmlTemplate = "";
   for (let mad of madvarer) {
@@ -128,12 +128,16 @@ function appendMadvarer(madvarer) {
     </div>
     </article>
     <article class="${mad.title} add-dato" style="display:none;" >
-      <p>Udløbsdato</p><input type="date">
+      <p>Udløbsdato</p><input onchange="setExpireDate(this.value);" type="date">
       ${generateFavFridgeButton(mad.id)}
       </article>
     `;
   }
   document.querySelector('#add-menu-forslag').innerHTML = htmlTemplate;
+}
+
+window.setExpireDate = function (dato){
+ ExpireDate = dato
 }
 
 // Tilføj-knappen under add-menuen bliver lavet her og srkevet ind i 'appendMadvarer' backtick-string. onclick der kører funktionen "addToFridge" og hvis Fridge eller undeholder det mad ID skal den ændre style og sige "tilføjet"
@@ -148,7 +152,7 @@ function generateFavFridgeButton(madId) {
   return btnTemplate;
 }
 
-window.addToFridge = function (madId) {
+window.addToFridge = function(madId) {
   addToFridge(madId);
 }
 
@@ -156,30 +160,31 @@ window.addToFridge = function (madId) {
 function addToFridge(madId) {
   //showLoader(true);
 
-
-  
-  
   // Array med madID til Firestore Database
   _userRef.doc(_currentUser.uid).set({
-    Fridge: firebase.firestore.FieldValue.arrayUnion(madId)
+    Fridge: firebase.firestore.FieldValue.arrayUnion({madId,ExpireDate})
   }, {
     merge: true
   });
-
-}
-window.addedToFridge = function (madId) {
-  addedToFridge(madId);
 }
 
-function addedToFridge(madId) {
+
+window.addedToFridge = function (madId, ExpireDate) {
+  console.log(madId, ExpireDate)
+  addedToFridge(madId, ExpireDate);
+  
+}
+
+function addedToFridge(madId, ExpireDate) {
   //showLoader(true);
+  console.log(madId, ExpireDate)
   _userRef.doc(_currentUser.uid).update({
-    Fridge: firebase.firestore.FieldValue.arrayRemove(madId)
+    Fridge: firebase.firestore.FieldValue.arrayRemove({madId, ExpireDate})
   });
 }
 
-// onclick funktion på save-knappen under profil siden. 
-window.updateUser = function () {
+// onclick funktion på save-knappen under profil siden.
+window.updateUser = function() {
   updateUser();
 }
 
@@ -191,7 +196,7 @@ function updateUser() {
     displayName: document.querySelector('#name').value
   });
 
-  // Fot at opdatere og tilføje brugerens navn og email i Databasen "users" 
+  // Fot at opdatere og tilføje brugerens navn og email i Databasen "users"
   _userRef.doc(_currentUser.uid).set({
     displayName: document.querySelector('#name').value,
     email: document.querySelector('#mail').value
@@ -206,20 +211,23 @@ async function appendFridge(FridgeIds = []) {
   if (FridgeIds.length === 0) {
     htmlTemplate = "<br><br><br><br><p>Tilføj ting til dit køleskab</p> <img src='images/favicon.png'>";
   } else {
-    for (let madId of FridgeIds) {
-      await _madRef.doc(madId).get().then(function (doc) {
-        let mad = doc.data();
-        mad.id = doc.id;
+    for (let mad of FridgeIds) {
+      await _madRef.doc(mad.madId).get().then(function (doc) {
+        let madData = doc.data();
+        madData.id = doc.id;
         htmlTemplate += `
         <article class="madvarer">
-          <div id="${mad.title}" class="madAppended">
-            <h4>${mad.title}</h4>
-            <img src="${mad.img}">
+          <div id="${madData.id}" class="madAppended ${foodStatus(mad.ExpireDate)}" onclick="appendDeleteBtn('${madData.title}')">
+            <h4>${madData.title}</h4>
+            <img src="${madData.img}">
           </div>
         </article>
+        <article class="${madData.title} add-dato deletebtn" style="display:none;">
+        ${generateDeleteButton(mad)}
+      </article>
       `;
       });
-      
+
     }
   }
   document.querySelector('#madvarer-container').innerHTML = htmlTemplate;
@@ -227,45 +235,54 @@ async function appendFridge(FridgeIds = []) {
 }
 
 
+function generateDeleteButton(mad) {
+  let btnTemplate = "";
+  if (_currentUser.Fridge && _currentUser.Fridge.includes(mad)) {
+    btnTemplate = `
+    <img src="images/skraldespand.svg" onclick="addedToFridge('${mad.madId}, ${mad.ExpireDate}')" alt="slet-knap">`;
+  }
+  return btnTemplate;
+}
 
 
-
-function foodStatus(madId) {
+function foodStatus(value, madId) {
+  console.log(madId)
+  console.log(value)
   // UDLØBSDATO
   var today = new Date();
   today.setMilliseconds(0)
   today.setSeconds(0)
   today.setHours(0)
   today.setMinutes(0)
-  var dato = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var dato = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   console.log(dato)
-  var expireDate = document.querySelector('input[type="date"]').value;
+  var expireDate = value;
   console.log(expireDate)
   var expire = new Date(expireDate)
   expire.setMilliseconds(0)
   expire.setSeconds(0)
   expire.setHours(0)
   expire.setMinutes(0)
-  
+
   var res = expire.getTime() - today.getTime();
-  // One day Time in ms (milliseconds) 
+  // One day Time in ms (milliseconds)
   var one_day = 1000 * 60 * 60 * 24;
-  let udløbsdato = res/one_day
+  let udløbsdato = res / one_day
   console.log(udløbsdato)
 
-  let madStatus = document.querySelector(`.madAppended`);
-  
+  //let madStatus = document.querySelector(`#${madId}`);
+
    if (udløbsdato<=0){
     console.log("Udløbet")
-    madStatus.classList.add("udløbet");
+    return "udløbet";
    }
    else if (udløbsdato<3) {
     console.log("Udløber snart")
-    madStatus.classList.add("udløber");
+    return "udløber";
    }
    else {
     console.log("Frisk")
-    madStatus.classList.add("frisk");
+    return "frisk";
    }
 
   }
