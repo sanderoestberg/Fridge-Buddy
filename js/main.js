@@ -1,3 +1,5 @@
+//======== FÆLLES ========== //
+
 import SpaService from "./spa-service.js";
 import Shoplist from "./shoplist.js";
 import AddBtn from "./add-button.js";

@@ -1,3 +1,6 @@
+
+//======== SHOPLIST SIDEN LAVET AF JOHANNE ========== //
+
 export default class Shoplist {
 
 // "Marker alle" knap

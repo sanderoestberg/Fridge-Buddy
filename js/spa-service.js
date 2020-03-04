@@ -1,3 +1,5 @@
+//======== FÆLLES OPSÆTNING ========== //
+
 export default class SpaService {
   constructor(defaultPage) {
     this.defaultPage = defaultPage;

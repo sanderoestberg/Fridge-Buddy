@@ -1,5 +1,8 @@
 "use strict";
 
+//======== OPSKRIFT SIDEN LAVET AF OSKAR ========== //
+
+
 // sidst i vores html har vi placeret en spinner der indikerer om indholdet på
 // siden er hentet eller stadig er ved at downloade.
 
